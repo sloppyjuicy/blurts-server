@@ -1,188 +1,78 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Strings for the main app
+
+
 ## The following messages are brand and should be kept entirely in English
 ## unless otherwise indicated.
 
--product-name = Firefox Monitor
--product-name-nowrap = <span class="nowrap">{ -product-name }</span>
+-product-name = Mozilla Monitor
 -product-short-name = Monitor
 -brand-name = Firefox
--brand-Mozilla = Mozilla
 -brand-HIBP = האם עקצו אותי
 -brand-fxa = חשבון Firefox
 -brand-pocket = Pocket
 -brand-lockwise = Firefox Lockwise
--brand-send = Firefox Send
--brand-fpn = Firefox Private Network
+-brand-firefox = Firefox
+-brand-monitor = Monitor
+-brand-fx-monitor = Mozilla Monitor
+-brand-mozilla = Mozilla
+-brand-premium = Premium
+-brand-monitor-premium = Monitor Premium
+-brand-mozilla-foundation = Mozilla Foundation
+-brand-github = GitHub
 -brand-mozilla-vpn = Mozilla VPN
 -brand-relay = Firefox Relay
+-brand-mozilla-monitor = Mozilla Monitor
+-brand-monitor-plus = Monitor Plus
 
 ##
 
-# “account” can be localized, “Firefox” must be treated as a brand,
-# and kept in English.
--brand-fx-account = חשבון Firefox
-terms-and-privacy = תנאים ופרטיות
-GitHub-link-title = GitHub
-error-scan-page-token = ניסית לסרוק יותר מדי כתובות דוא"ל בפרק זמן קצר. משיקולי אבטחה, חסמנו את חיפושיך באופן זמני. יהיה ניתן לחפש שוב מאוחר יותר.
-error-could-not-add-email = לא ניתן להוסיף כתובת דוא״ל למסד הנתונים.
 error-not-subscribed = כתובת הדוא״ל הזו אינה רשומה ל־{ -product-name }.
 error-hibp-throttled = יותר מדי חיבורים אל { -brand-HIBP }.
 error-hibp-connect = שגיאה בהתחברות אל { -brand-HIBP }.
-error-hibp-load-breaches = לא ניתן לטעון פריצות.
-error-must-be-signed-in = עליך להיכנס לחשבון ה־{ -brand-fxa } שלך.
-error-to-finish-verifying = כדי להשלים את אימות הדוא״ל הזה עבור { -product-name }, עליך להתחבר באמצעות הדוא״ל הראשי שלך.
-home-title = { -product-name }
-home-not-found = הדף לא נמצא.
-scan-title = { -product-name } : תוצאות סריקה
 user-add-invalid-email = דוא״ל שגוי
 user-add-too-many-emails = הינך במעקב אחר המספר המירבי של כתובות דוא״ל.
-user-add-email-verify-subject = אימות המינוי שלך אל { -product-name }.
 user-add-duplicate-email = דוא״ל זה כבר נוסף אל { -product-name }.
-error-headline = שגיאה
+user-add-verification-email-just-sent = לא ניתן לשלוח הודעת דוא״ל לאימות נוספת במהירות כזו. נא לנסות שוב מאוחר יותר.
+user-add-unknown-error = משהו השתבש בעת הוספת כתובת דוא״ל נוספת. נא לנסות שוב מאוחר יותר.
+user-delete-unknown-error = משהו השתבש בעת הסרת כתובת דוא״ל. נא לנסות שוב מאוחר יותר.
 user-verify-token-error = נדרש אסימון אימות.
-user-verify-email-report-subject = דוח { -product-name } שלך
-user-unsubscribe-token-error = ביטול הרשמה דורש אסימון.
-user-unsubscribe-title = { -product-name } : ביטול הרשמה
-pwt-section-headline = ססמאות חזקות יותר = הגנה טובה יותר
-landing-headline = זכותך להגנה מפני פצחנים מתחילה כאן.
-scan-placeholder = נא להכניס כתובת דוא״ל
-scan-submit = חיפוש כתובת הדוא״ל שלך
-scan-error = יש להכניס כתובת דוא״ל תקנית.
-download-firefox-banner-button = הורדת { -brand-name }
-# Appears after Firefox Monitor has sent a verification email to a new user. 
-signup-modal-sent = נשלח!
-sign-up = הרשמה
-form-signup-error = יש להכניס כתובת דוא״ל תקנית
-# breach-date = the calendar date a particular data theft occurred. 
-breach-date = מועד דליפה:
-# compromised accounts = the total number of user accounts exposed in data breach
-compromised-accounts = חשבונות שנחשפו:
 # compromised-data = the kind of user data exposed to hackers in data breach.
 compromised-data = מידע שנחשף:
-unsub-headline = ביטול הרשמה ל־{ -product-name-nowrap }
-unsub-blurb = פעולה זו תסיר את הדוא"ל שלך מרשימת { -product-name-nowrap }, ולא יישלחו אליך התראות על פרצות חדשות שפורסמו.
-unsub-button = ביטול הרשמה
 # Breach data provided by Have I Been Pwned.
+# Variables:
+#   $hibp-link (String) - Link to Have I Been Pwned
 hibp-attribution = נתוני הדליפה מסופקים על־ידי { $hibp-link }
-share-twitter = לרוב האנשים יש כ־100 חשבונות מקוונים. האם החשבונות שלך נחשפו בדליפת נתונים?
-share-facebook-headline = האם היית חלק מדליפת נתונים
-share-facebook-blurb = האם החשבונות המקוונים שלך נחשפו בדליפת נתונים?
-og-site-description = { -product-name } יבדוק האם היית חלק מפרצה. באפשרותך להירשם להתראות על פרצות עתידיות ועצות לשמירת החשבונות שלך בטוחים.
 show-all = הצגת הכל
-fxa-scan-another-email = רוצה לבדוק כתובת דוא״ל נוספת?
-sign-in = התחברות
 sign-out = התנתקות
 # Manage Firefox Account, link to page where account holders can change their account settings.
 manage-fxa = ניהול { -brand-fxa }
-have-an-account = כבר יש לך חשבון?
-fxa-pwt-summary-2 =
-    ססמאות קצרות וססמאות בנות מילה אחת קלות לניחוש על־ידי פצחנים.
-    יש להשתמש לפחות בשתי מילים ובשילוב של אותיות, ספרות ותווים מיוחדים.
-fxa-pwt-summary-4 = מנהלי ססמאות כגון 1Password, LastPass, Dashlaneו־Bitwarden שומרים את הססמאות שלך וממלאים אותן באתרים עבורך. הם אפילו יעזרו לך לייצר ססמאות חזקות.
-# Alerts is a noun
-sign-up-for-alerts = הרשמה להתראות
-# Link title
-frequently-asked-questions = תשובות לשאלות נפוצות
-about-firefox-monitor = על אודות { -product-name }
 # Link title
 preferences = העדפות
 # Link title
 home = בית
 # Link title
-breaches = דליפות
-# Link title
 security-tips = עצות אבטחה
-fxa-account = { -brand-fxa }
-# Aria button message to open menu. "Open Firefox Account Navigation"
-open-fxa-menu = פתיחת הניווט ב־{ -brand-fxa }
-# Appears above a snippet about the breach most recently reported to Firefox Monitor.
-latest-breach = הדליפה העדכנית ביותר שנוספה
 # Link title
 more-about-this-breach = עוד על הדליפה הזו
-take-control = קבלת השליטה על הנתונים האישיים שלך בחזרה.
-cant-stop-hackers = אי אפשר למנוע מהאקרים לפרוץ. אבל אפשר להימנע מהרגלים רעים שמקלים על עבודתם.
-if-your-info = אם המידע שלך נחשף בדליפת נתונים חדשה, נשלח לך התרעה.
 monitor-several-emails = ניטור אחר מספר כתובות דוא״ל
 sensitive-sites = כיצד { -product-name } מתייחס לאתרים רגישים?
-about-fxm-headline = על אודות { -product-name }
-# How Firefox Monitor works
-how-fxm-works = איך { -product-name } עובד
-protect-your-privacy = הגנה על הפרטיות המקוונת שלך
-
-## What to do after data breach tips
-
-even-for-old = חשוב לעדכן את הססמה שלך גם עבור חשבונות ישנים.
-strength-of-your-pw = חוזק הססמאות שלך משפיע ישירות על האבטחה המקוונת שלך.
-create-strong-passwords = כיצד ליצור ססמאות חזקות
-five-myths = 5 מיתוסים על מנהלי ססמאות
-feat-security-tips = עצות אבטחה להגנה על החשבונות שלך
-feat-sensitive = חיפוש מתקדם בדליפות רגישות
-# This string is shown beneath each of the user’s email addresses to indicate
-# how many known breaches that email address was found in. 
-appears-in-x-breaches =
-    { $breachCount ->
-        [one] מופיע בדליפה מוכרת אחת.
-       *[other] מופיע ב־{ $breachCount } דליפות מוכרות.
-    }
-back-to-top = חזרה למעלה
-comm-opt-1 = שליחת כל ההתרעות לדליפות אל { $primaryEmail }.
-add-new-email = הוספת כתובת דוא״ל חדשה
+avoid-personal-info = כדאי להימנע משימוש בפרטים אישיים בססמאות
 send-verification = שליחת קישור לאימות
 # This string is a header on the user preferences page and
 # appears above a check-box list of user options which allow
 # the user to choose whether or not they want to receive breach
-# alerts for all of their monitored email addresses to a single 
+# alerts for all of their monitored email addresses to a single
 # email address.
 breach-summary = קיצור הדליפה
-show-breaches-for-this-email = הצגת כל הדליפות עבור דוא״ל זה.
-link-change-primary = שינוי כתובת דוא״ל ראשית
-remove-fxm = הסרת { -product-name }
-remove-fxm-blurb =
-    כיבוי ההתרעות של { -product-name }. ה־{ -brand-fxa } שלך ישאר פעיל, ויתכן שיתקבלו 
-    הודעות אחרות הקשורות לחשבון שלך.
-# Button title
-manage-email-addresses = ניהול כתובות דוא״ל
-welcome-back = ברוכים השבים, { $userName }!
-welcome-user = ברוכים הבאים, { $userName }!
+
+##
+
 breach-alert-subject = ‏{ -product-name } מצא את הדוא״ל שלך בדליפת נתונים חדשה
-your-info-was-discovered-headline = המידע שלך התגלה בדליפת נתונים חדשה.
-your-info-was-discovered-blurb =
-    נרשמת לקבלת התראות של { -product-name } 
-    כאשר הדוא״ל שלך מופיע בדליפת נתונים. הנה מה שאנחנו יודעים על דליפה זו.
-what-to-do-after-breach = מה לעשות לאחר דליפת נתונים
-ba-next-step-1 = לשנות את הססמה שלך לססמה חזקה וייחודית.
-ba-next-step-blurb-1 =
-    סיסמה חזקה משתמשת בשילוב של אותיות גדולות וקטנות, 
-    תווים מיוחדים ומספרים. הססמה אינה מכילה מידע אישי כמו 
-    הכתובת, יום ההולדת או שם המשפחה שלך.
-ba-next-step-2 = להפסיק לחלוטין את השימוש בססמה שנחשפה
-faq2 = מדוע לקח כל כך הרבה זמן כדי ליידע אותי על דליפה זו?
-new-breaches-found =
-    { $breachCount ->
-        [one] דליפה אחת נמצאה
-       *[other] { $breachCount } דליפות נמצאו
-    }
-was-your-info-exposed = האם המידע שלך נחשף בדליפת הנתונים של { $breachName }?
-fb-not-comp = דוא״ל זה לא נחשף בדליפה של { $breachName }.
-other-breaches-found =
-    { $breachCount ->
-        [one] יחד עם זאת, הוא כן נחשף בדליפת נתונים אחת אחרת.
-       *[other] יחד עם זאת, הוא כן נחשף ב־{ $breachCount } דליפות נתונים אחרות.
-    }
-fb-comp-only = דוא״ל זה נחשף בדליפה של { $breachName }.
-fb-comp-and-others =
-    { $breachCount ->
-        [one] דוא״ל זה נחשף בדליפת נתונים מוכרת אחת, כולל { $breachName }.
-       *[other] דוא״ל זה נחשף ב־{ $breachCount } דליפות נתונים מוכרות, כולל { $breachName }.
-    }
-no-results-blurb = מצטערים, דליפה זו אינה נמצאת בבסיס הנתונים שלנו.
-all-breaches-headline = כל הדליפות ב־{ -product-name }
-search-breaches = חיפוש בדליפות
-# "Appears in-page as: Showing: All Breaches"
-currently-showing = מופיעות:
-
-## Updated error messages
-
-error-bot-headline = החיפושים מושהים באופן זמני
 # This string is displayed under a large numeral that indicates the total number
 # of data breaches that exposed a user’s password. Don’t add $passwords to
 # your localization, because it would result in the number showing twice.
@@ -199,52 +89,98 @@ known-data-breaches-exposed =
         [one] דליפת נתונים מוכרת אחת חשפה מידע עליך
        *[other] דליפות נתונים מוכרות חשפו מידע עליך
     }
-scan-results-known-breaches =
-    { $breachCount ->
-        [one] דוא״ל זה נחשף בדליפת נתונים מוכרת אחת.
-       *[other] דוא״ל זה נחשף ב־{ $breachCount } דליפות נתונים מוכרות.
-    }
-# This string appears on breach detail pages and is followed by a list
-# of data classes that the breach exposed.
-additional-information-including = מידע נוסף, כולל:
-# Appears on the All Breaches page and is followed by a list of filter options
-# that a user can filter the visible breaches by.
-filter-by = סינון לפי קטגוריה:
 # Title that appears in the mobile menu bar and opens the mobile menu when clicked.
 menu = תפריט
-to-affected-email = שליחת התראות על דליפות לכתובת הדוא״ל המושפעת
-# This string appears in a banner at the top of each page and is followed by a "Learn More" link.
-join-firefox = יש דרך להגן על הפרטיות שלך. להצטרף ל־{ -brand-name }.
 
 ## These are part of a confirmation page that appears after a user has verified
 ## an additional email to Firefox Monitor.
 
-email-added-to-subscription = נודיע לך אם { $email } נחשף בדליפת נתונים.
-
-##
-
 # This string is a label for the calendar date a breach is added to the database
-# and is followed by that date. 
+# and is followed by that date.
 breach-added-label = דליפה נוספה:
 
-## This string contains nested markup that becomes a link later in the code.
-## Please do not modify or remove "<a>" and "</a>".
+##
 
+# A status indicator that appears in the top right corner of new breach cards
+new-breach = חדש
 
 ##
 
-
-## These strings contain nested markup that is later used to style the text inside of it.
-## Please do not modify or remove "<span>" and "</span>".
-
-
-##
-
-known-data-breaches-resolved =
-    { $numResolvedBreaches ->
-        [one] דליפת נתונים מוכרת אחת סומנה שטופלה
-       *[other] דליפות נתונים מוכרות סומנו שטופלו
+# “account” can be localized, “Mozilla” must be treated as a brand,
+# and kept in English.
+-brand-mozilla-account =
+    { $case ->
+        [the] חשבון ה־Mozilla
+       *[a] חשבון Mozilla
     }
+open-in-new-tab-alt = פתיחת קישור בלשונית חדשה
 
-## VPN promotional banner.  HTML tags should not be translated, e.g. `<em>`
+## Search Engine Optimization
 
+
+## Header
+
+# Deprecated
+brand-fx-monitor = { -brand-fx-monitor }
+sign-in = התחברות
+brand-mozilla-monitor = { -brand-fx-monitor }
+
+## Site navigation
+
+mobile-menu-label = תפריט ראשי
+main-nav-button-collapse-label = צמצום התפריט
+main-nav-button-collapse-tooltip = צמצום התפריט
+main-nav-button-expand-label = הרחבת התפריט
+main-nav-button-expand-tooltip = הרחבת התפריט
+main-nav-label = ניווט
+main-nav-link-home-label = בית
+main-nav-link-dashboard-label = לוח בקרה
+main-nav-link-settings-label = הגדרות
+main-nav-link-faq-label = תשובות לשאלות נפוצות
+main-nav-link-faq-tooltip = תשובות לשאלות נפוצות
+
+## User menu
+
+user-menu-trigger-label = פתיחת תפריט משתמש
+user-menu-trigger-tooltip = פרופיל
+user-menu-manage-fxa-label = ניהול { -brand-mozilla-account(case: "the") } שלך
+user-menu-settings-label = הגדרות
+user-menu-settings-tooltip = הגדרת תצורה של { -brand-mozilla-monitor }
+user-menu-help-label = עזרה ותמיכה
+user-menu-help-tooltip = קבלת עזרה בשימוש ב־{ -brand-mozilla-monitor }
+user-menu-signout-label = התנתקות
+user-menu-signout-tooltip = התנתקות מ־{ -brand-mozilla-monitor }
+
+## Footer
+
+mozilla = { -brand-mozilla }
+terms-of-service = תנאי השירות
+privacy-notice = הצהרת פרטיות
+github = { -brand-github }
+footer-nav-recent-breaches = דליפות נתונים אחרונות
+footer-external-link-faq-label = תשובות לשאלות נפוצות
+footer-external-link-faq-tooltip = תשובות לשאלות נפוצות
+
+## Error page
+
+# Variables:
+#   $errorCode (number) - "404"
+error-page-error-404-title = { $errorCode } הדף לא נמצא
+error-page-error-404-copy = הדף שחיפשת כבר לא קיים, עמך הסליחה.
+error-page-error-404-cta-button = חזרה אחורה
+# Variables:
+#   $errorCode (number) - the status code of the error, e.g. 403
+error-page-error-other-title = { $errorCode } משהו השתבש
+
+## Breach overview page
+
+search-breaches = חיפוש בדליפות
+
+## Public breach detail page
+
+
+## Firefox Monitor -> Mozilla Monitor rebrand banner
+
+banner-monitor-rebrand-dismiss-button-label = אישור
+banner-monitor-rebrand-dismiss-button-tooltip = סגירה
+loading-accessibility = בטעינה

@@ -1,0 +1,129 @@
+@use "../../../tokens";
+
+.wrapper {
+  align-items: center;
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  cursor: pointer;
+  background-color: transparent;
+  border-style: none;
+  // Diameter of the Bento image:
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: tokens.$border-radius-sm;
+
+  svg {
+    color: tokens.$color-violet-70;
+
+    &:hover {
+      color: tokens.$color-violet-90;
+    }
+  }
+}
+
+.popup {
+  width: tokens.$content-xs;
+  list-style-type: none;
+  box-shadow: tokens.$box-shadow-sm;
+  border-radius: tokens.$border-radius-sm;
+  background-color: tokens.$color-white;
+  position: relative;
+
+  &::before {
+    $tooltip-size: 12px;
+    background-color: white;
+    content: "";
+    height: $tooltip-size;
+    position: absolute;
+    right: 100px; // Vertically align chevron with bento icon
+    top: 0;
+    transform: translateY(-50%) rotate(45deg);
+    width: $tooltip-size;
+  }
+
+  .appPickerHeading {
+    color: tokens.$color-black;
+    padding: tokens.$spacing-lg;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: tokens.$spacing-sm;
+    // The first gradient is all white, except for the bottom 3 pixels which
+    // are transparent. That way, they leave a gap for the coloured background
+    // that flows to the right, rendering it as a coloured bottom border.
+    background-image: linear-gradient(
+        to bottom,
+        tokens.$color-white calc(100% - 3px),
+        rgba(0, 0, 0, 0)
+      ),
+      linear-gradient(to right, #f73940 1.25%, #a83db5 96.87%);
+    border-radius: tokens.$border-radius-sm tokens.$border-radius-sm 0 0;
+
+    img {
+      height: tokens.$layout-sm;
+    }
+
+    h2 {
+      font: tokens.$text-body-md;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: tokens.$spacing-md;
+    padding: tokens.$spacing-lg;
+    list-style-type: none;
+  }
+
+  .menuItemWrapper {
+    &[data-key="mozilla"] {
+      grid-column: 1 / 4;
+    }
+
+    .menuLink {
+      display: flex;
+      flex-direction: column;
+      color: tokens.$color-black;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+
+      font: tokens.$text-body-sm;
+
+      img {
+        height: tokens.$layout-sm;
+        padding: tokens.$spacing-lg;
+        width: -moz-fit-content;
+        width: fit-content;
+        box-sizing: content-box;
+        border-radius: tokens.$border-radius-md;
+      }
+
+      &.mozillaLink {
+        color: tokens.$color-blue-50;
+        justify-content: center;
+        width: 100%;
+        margin-top: tokens.$spacing-lg;
+      }
+    }
+
+    &.isFocused {
+      outline: none;
+      cursor: pointer;
+
+      .menuLink {
+        color: tokens.$color-violet-90;
+
+        img {
+          background-color: tokens.$color-violet-10;
+        }
+      }
+    }
+  }
+}

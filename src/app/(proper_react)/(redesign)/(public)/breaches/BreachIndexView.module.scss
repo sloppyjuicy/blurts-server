@@ -1,0 +1,135 @@
+@use "../../../../tokens";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: tokens.$spacing-lg;
+  padding: tokens.$spacing-xs;
+
+  @media (min-width: tokens.$screen-md) {
+    padding: tokens.$spacing-lg;
+  }
+
+  header {
+    padding: tokens.$spacing-2xl tokens.$spacing-xl;
+    max-width: tokens.$content-lg;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-md;
+
+    h1 {
+      font: tokens.$text-title-sm;
+    }
+  }
+}
+
+.filterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: tokens.$spacing-sm;
+  padding: tokens.$spacing-md;
+  transition: opacity ease-in 500ms;
+
+  &[aria-hidden="true"] {
+    // We don't want to show the form before it becomes interactive, but to
+    // prevent the layout from shifting, we do render it invisibly:
+    opacity: 0;
+  }
+
+  label {
+    font: tokens.$text-body-sm;
+    @include tokens.visually-hidden;
+  }
+  input {
+    font: tokens.$text-body-lg;
+    padding: tokens.$spacing-sm;
+  }
+}
+
+.breachList {
+  width: tokens.$content-xl;
+  max-width: calc(100% - 2 * tokens.$spacing-2xl);
+  display: grid;
+  align-items: start;
+  grid-gap: tokens.$spacing-2xl;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: tokens.$screen-md) {
+    grid-template-columns: repeat(auto-fit, minmax(tokens.$content-xs, 1fr));
+  }
+
+  li {
+    height: 100%;
+  }
+
+  .breachCard {
+    display: flex;
+    flex-direction: column;
+    box-shadow: tokens.$box-shadow-sm;
+    border-radius: tokens.$border-radius-md;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      box-shadow: tokens.$box-shadow-md;
+    }
+
+    h2 {
+      background-color: tokens.$color-grey-05;
+      display: flex;
+      align-items: center;
+      gap: tokens.$spacing-md;
+      padding: tokens.$spacing-md tokens.$spacing-lg;
+      font: tokens.$text-title-3xs;
+    }
+
+    dl {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$spacing-md;
+      padding: tokens.$spacing-lg tokens.$spacing-md;
+
+      @media (min-width: tokens.$screen-sm) {
+        // `.breachCard h2` padding + breach logo width + `.breachCard h2` gap,
+        // to align the content to the title in the header:
+        padding-inline-start: calc(
+          tokens.$spacing-md + 32px + tokens.$spacing-md
+        );
+      }
+
+      dt {
+        font: tokens.$text-body-sm;
+        color: tokens.$color-grey-50;
+      }
+
+      dd {
+        font-weight: 700;
+      }
+    }
+
+    .linkDescription {
+      padding: tokens.$spacing-md;
+      color: tokens.$color-blue-50;
+      font-weight: 700;
+
+      @media (min-width: tokens.$screen-sm) {
+        // `.breachCard h2` padding + breach logo width + `.breachCard h2` gap,
+        // to align the content to the title in the header:
+        padding-inline-start: calc(
+          tokens.$spacing-md + 32px + tokens.$spacing-md
+        );
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

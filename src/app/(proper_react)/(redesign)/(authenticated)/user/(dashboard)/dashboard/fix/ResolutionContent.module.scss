@@ -1,0 +1,36 @@
+@use "../../../../../../../tokens";
+
+.recommendations {
+  padding-top: tokens.$spacing-md;
+  p {
+    font: tokens.$text-body-sm;
+  }
+  ul,
+  ol {
+    padding-top: tokens.$spacing-md;
+    padding-left: tokens.$spacing-lg;
+
+    li {
+      margin-bottom: tokens.$spacing-xs;
+      align-items: flex-start;
+    }
+  }
+}
+
+.breachItemsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-xs;
+
+  .breachItem {
+    font: tokens.$text-body-sm;
+    font-weight: 600;
+    background: tokens.$color-grey-10;
+    padding: tokens.$spacing-xs tokens.$spacing-sm;
+    border-radius: tokens.$border-radius-md;
+
+    .date {
+      font-weight: 400;
+    }
+  }
+}

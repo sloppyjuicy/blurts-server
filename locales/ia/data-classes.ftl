@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Saldos de conto bancari
 address-book-contacts = Contactos del libro del adresses
@@ -14,7 +19,7 @@ avatars = Avatares
 bank-account-numbers = Numeros de conto bancari
 beauty-ratings = Evalutationes de beltate
 biometric-data = Datos biometric
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bios
 browser-user-agent-details = Detalios del agente del usator del navigator
@@ -25,6 +30,8 @@ career-levels = Nivellos de carriera
 cellular-network-names = Nomines de rete del cellular
 charitable-donations = Donationes caritabile
 chat-logs = Registros de chat
+citizenship-statuses = Statos de nationalitate
+clothing-sizes = Talias de vestimentos
 credit-card-cvv = CVV de carta de credito
 credit-cards = Cartas de credito
 credit-status-information = Informationes sur e stato del credito
@@ -34,6 +41,9 @@ customer-interactions = interactiones del clientes
 dates-of-birth = Datas de nascentia
 deceased-date = Data de decesso
 deceased-statuses = Statos de decesso
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Instructiones pro le delivration
 device-information = informationes sur le apparatos
 device-serial-numbers = Numeros serial del apparato
 device-usage-tracking-data = Datos de uso del apparato
@@ -42,7 +52,7 @@ driver-s-licenses = Licentias de drivers
 drug-habits = habitos de consumo de drogas
 eating-habits = habitos alimentari
 education-levels = nivellos de education
-email-addresses = Adresse de e-mail
+email-addresses = Adresse email
 email-messages = messages de email
 employers = empleatores
 employment-statuses = Statos de empleo
@@ -54,11 +64,13 @@ family-structure = Structura familiar
 financial-investments = Investimentos financiari
 financial-transactions = Transactiones financiari
 fitness-levels = Nivellos de condition physic
+flights-taken = Volos facite
 genders = Generes
 geographic-locations = Positiones geographic
 government-issued-ids = IDs publicate per le governamento
 health-insurance-information = Informationes re le assecurantia sur le salute
 historical-passwords = chronologia del contrasignos
+hiv-statuses = Statos de HIV
 home-loan-information = Informationes sur le presto del casa
 home-ownership-statuses = Statos de proprietate del casa
 homepage-urls = URLs del pagina principal
@@ -69,10 +81,13 @@ instant-messenger-identities = Identitates del communicatores instantanee
 ip-addresses = Adresses IP
 job-applications = Applicationes de labor
 job-titles = professiones
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Placas de matriculation
 living-costs = Costos pro viver
+# This string refers to financial loans.
+loan-information = Information de presto
 login-histories = Chronologias de accesso
+loyalty-program-details = Detalios del programma de fidelitate
 mac-addresses = adresses MAC
 marital-statuses = statos conjugal
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Nomines
 nationalities = Nationalitates
 net-worths = Valores nette
 nicknames = Pseudonymos
+# no data classes found
+none-data-class = Nulle
 occupations = Occupationes
+# various data classes grouped together
+other-data-class = Altere
 parenting-plans = Planos de education
 partial-credit-card-data = Datos partial del carta de credito
 partial-dates-of-birth = Datas de nascentia partial
+partial-phone-numbers = Numeros de telephono partial
 passport-numbers = numeros de passaporto
 password-hints = Suggestiones del contrasigno
 password-strengths = Fortias del contrasigno
@@ -109,7 +129,7 @@ profile-photos = Photos del profilo
 purchases = Compras
 purchasing-habits = Habitudes de compras
 races = Racias
-recovery-email-addresses = Adresses de e-mail de recuperation
+recovery-email-addresses = Adresses email de recuperation
 relationship-statuses = Statos de relation
 religions = Religiones
 reward-program-balances = Saldos de programma de premio
@@ -128,6 +148,7 @@ spouses-names = Nomines del conjuges
 support-tickets = Requestas de supporto
 survey-results = Resultatos del questionario
 taxation-records = Registros fiscal
+telecommunications-carrier = Operatores de telecommunicationes
 time-zones = Fusos horari
 travel-habits = habitos de viage
 user-statuses = Statos del usator
@@ -135,6 +156,7 @@ user-website-urls = URLs del sito web del usator
 usernames = Nomines de usator
 utility-bills = Facturas
 vehicle-details = Detalios del auto
+vehicle-identification-numbers-vins = Numeros de identification del vehiculo (VIN)
 website-activity = Activitate del sito web
 work-habits = Habitudes de labor
 years-of-birth = Annos de nascentia

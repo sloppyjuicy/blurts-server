@@ -1,8 +1,6 @@
 # flod as main contact for string changes
 locales/en/*.ftl @flodolo
+locales-pending/*.ftl @flodolo
 
 # svcops helps us review db changes
 db/migrations/* @mozilla/svcops
-
-# pdehaan as a reviewer for breach logos
-public/img/logos/* @pdehaan

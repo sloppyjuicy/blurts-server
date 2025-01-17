@@ -1,1 +1,2 @@
-web: npm run build:all && node server.js
+release: npm run db:migrate
+web: npm start

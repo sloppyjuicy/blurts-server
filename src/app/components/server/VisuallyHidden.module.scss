@@ -1,0 +1,5 @@
+@use "../../tokens";
+
+.visuallyHidden {
+  @include tokens.visually-hidden;
+}

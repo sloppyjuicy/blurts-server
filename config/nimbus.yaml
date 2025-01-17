@@ -1,0 +1,158 @@
+about:
+  description: Nimbus Feature Manifest for Monitor Web testing
+channels:
+  - local
+  - staging
+  - production
+features:
+  last-scan-date:
+    description: Show the date of the user's last scan in the top right-hand corner
+    variables:
+      enabled:
+        description: If the feature is enabled
+        type: Boolean
+        default: false
+    defaults:
+      - channel: local
+        value: { "enabled": true }
+      - channel: staging
+        value: { "enabled": true }
+      - channel: production
+        value: { "enabled": false }
+  welcome-scan-optional-info:
+    description: Show additional optional input fields for the data broker scan
+    variables:
+      enabled:
+        description: If the feature is enabled
+        type: Boolean
+        default: false
+      variant:
+        description: The optional fields to show
+        type: OptionalBrokerScanInfoFields
+        default: none
+    defaults:
+      - channel: local
+        value: {
+          "enabled": true,
+          "variant": middleName,
+        }
+      - channel: staging
+        value: {
+          "enabled": false,
+          "variant": none,
+        }
+      - channel: production
+        value: {
+          "enabled": false,
+          "variant": none,
+        }
+  data-privacy-petition-banner:
+    description: Show the data privacy petition banner to US users
+    variables:
+      enabled:
+        description: If the feature is enabled
+        type: Boolean
+        default: false
+    defaults:
+      - channel: local
+        value: { "enabled": true }
+      - channel: staging
+        value: { "enabled": false }
+      - channel: production
+        value: { "enabled": false }
+  landing-page-free-scan-cta:
+    description: Landing page free scan CTA
+    variables:
+      enabled:
+        description: If the feature is enabled
+        type: Boolean
+        default: false
+      variant:
+        description: The CTA variant to show
+        type: FreeScanCtaType
+        default: ctaWithEmail
+    defaults:
+      - channel: local
+        value: {
+          "enabled": false,
+          "variant": ctaWithEmail,
+        }
+      - channel: staging
+        value: {
+          "enabled": false,
+          "variant": ctaWithEmail,
+        }
+      - channel: production
+        value: {
+          "enabled": false,
+          "variant": ctaWithEmail,
+        }
+  data-broker-removal-time-estimates:
+    description: Show the data broker removal time estimates
+    variables:
+      enabled:
+        description: If the feature is enabled
+        type: Boolean
+        default: false
+    defaults:
+      - channel: local
+        value: { "enabled": true }
+      - channel: staging
+        value: { "enabled": true }
+      - channel: production
+        value: { "enabled": true }
+  landing-page-redesign-plus-eligible-experiment:
+    description: Landing page redesign
+    variables:
+      enabled:
+        description: If the feature is enabled
+        type: Boolean
+        default: false
+      variant:
+        description: The landing page variant to show
+        type: LandingPageVariant
+        default: default
+    defaults:
+      - channel: local
+        value: {
+          "enabled": true,
+          "variant": redesign,
+        }
+      - channel: staging
+        value: {
+          "enabled": false,
+          "variant": default,
+        }
+      - channel: production
+        value: {
+          "enabled": false,
+          "variant": default,
+        }
+enums:
+  OptionalBrokerScanInfoFields:
+    description: An enum of optional broker scan info fields
+    variants:
+      suffix:
+        description: Only show the optional suffix field
+      middleName:
+        description: Only show the optional middle name field
+      suffixAndMiddleName:
+        description: Show the optional suffix and middle name fields
+      none:
+        description: Do not show any optional fields
+  FreeScanCtaType:
+    description: An enum of free scan CTA types
+    variants:
+      ctaWithEmail:
+        description: Show a CTA button with an optional email input
+      ctaOnly:
+        description: Only show a CTA button with the label “Get free scan”
+      ctaOnlyAlternativeLabel:
+        description: Only show a CTA button with the label “Sign up to get free scan”
+  LandingPageVariant:
+    description: An enum of landing page variants
+    variants:
+      default:
+        description: Show the default landing page
+      redesign:
+        description: Show the redesigned landing page

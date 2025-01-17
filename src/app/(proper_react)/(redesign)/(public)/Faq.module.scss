@@ -1,0 +1,74 @@
+@use "../../../tokens";
+
+.faqWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: tokens.$layout-md tokens.$spacing-md;
+  align-items: center;
+  gap: tokens.$spacing-md;
+
+  .faqTitle {
+    font: tokens.$text-title-2xs;
+    font-weight: 600;
+  }
+
+  .faqCta {
+    font-weight: 600;
+    color: tokens.$color-blue-50;
+  }
+
+  dl {
+    padding-top: tokens.$spacing-md;
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$layout-xs;
+    width: 100%;
+
+    @media screen and (min-width: tokens.$screen-lg) {
+      width: tokens.$content-lg;
+    }
+
+    .faqQuestion {
+      width: 100%;
+      background: none;
+      border: none;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: tokens.$layout-md;
+      align-items: center;
+      font: tokens.$text-body-lg;
+      cursor: pointer;
+      text-align: start;
+
+      svg {
+        color: tokens.$color-blue-60;
+        width: 12px;
+        height: 12px;
+        transform: rotate(135deg);
+        transition: transform 0.3s ease-in-out;
+        flex-shrink: 0;
+        &.expanded {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .faqAnswer {
+      display: none;
+      height: 0;
+
+      @media screen and (min-width: tokens.$screen-lg) {
+        padding-right: tokens.$spacing-lg;
+      }
+
+      &.expanded {
+        display: block;
+        height: auto;
+      }
+    }
+  }
+}

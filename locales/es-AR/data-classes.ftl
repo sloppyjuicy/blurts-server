@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Saldos de cuentas
 address-book-contacts = Contactos de la Libreta de direcciones
@@ -14,7 +19,7 @@ avatars = Avatares
 bank-account-numbers = Números de cuentas bancarias
 beauty-ratings = Clasificaciones de belleza
 biometric-data = Datos biométricos
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Biografías
 browser-user-agent-details = Detalles del agente de usuario del navegador
@@ -25,6 +30,8 @@ career-levels = Niveles de carrera
 cellular-network-names = Nombres de redes celulares
 charitable-donations = Donaciones de caridad
 chat-logs = Registros de chat
+citizenship-statuses = Estados de ciudadanía
+clothing-sizes = Talles de ropa
 credit-card-cvv = Tarjeta de crédito CVV
 credit-cards = Tarjetas de crédito
 credit-status-information = Información del estado del crédito
@@ -34,6 +41,9 @@ customer-interactions = Interacciones con el cliente
 dates-of-birth = Fechas de nacimiento
 deceased-date = Fecha de fallecimiento
 deceased-statuses = Estados de los fallecidos
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Instrucciones de delivery
 device-information = Información del dispositivo
 device-serial-numbers = Números de serie del dispositivo
 device-usage-tracking-data = Datos de rastreo del uso del dispositivo
@@ -54,11 +64,13 @@ family-structure = Estructura familiar
 financial-investments = Inversiones financieras
 financial-transactions = Transacciones financieras
 fitness-levels = Niveles de condición física
+flights-taken = Vuelos tomados
 genders = Géneros
 geographic-locations = Ubicaciones geográficas
 government-issued-ids = IDs emitidos por el Gobierno
 health-insurance-information = Información del seguro de salud
 historical-passwords = Contraseñas históricas
+hiv-statuses = Estados de HIV
 home-loan-information = Información del préstamo hipotecario
 home-ownership-statuses = Estados de propiedad de la vivienda
 homepage-urls = URLs de las páginas de inicio
@@ -69,10 +81,13 @@ instant-messenger-identities = Identidades de mensajería instantánea
 ip-addresses = Direcciones IP
 job-applications = Solicitudes de empleo
 job-titles = Cargos laborales
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Chapa patente
 living-costs = Costos de vida
+# This string refers to financial loans.
+loan-information = Información del préstamo
 login-histories = Historiales de inicio de sesión
+loyalty-program-details = Detalles del programa de fidelización
 mac-addresses = Direcciones MAC
 marital-statuses = Estados civiles
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Nombres
 nationalities = Nacionalidades
 net-worths = Nivel de ingresos
 nicknames = Apodos
+# no data classes found
+none-data-class = Ninguna
 occupations = Ocupaciones
+# various data classes grouped together
+other-data-class = Otras
 parenting-plans = Planes de crianza
 partial-credit-card-data = Datos parciales de la tarjeta de crédito
 partial-dates-of-birth = Fechas parciales de nacimiento
+partial-phone-numbers = Números de teléfono parciales
 passport-numbers = Números del pasaporte
 password-hints = Sugerencias para la contraseña
 password-strengths = Fortalezas de la contraseña
@@ -128,6 +148,7 @@ spouses-names = Nombres de cónyuges
 support-tickets = Pedidos de ayuda
 survey-results = Resultados de la encuesta
 taxation-records = Registros fiscales
+telecommunications-carrier = Operadores de telecomunicaciones
 time-zones = Zonas horarias
 travel-habits = Hábitos de viaje
 user-statuses = Estados del usuario
@@ -135,6 +156,7 @@ user-website-urls = URLs del sitio web del usuario
 usernames = Nombres de usuario
 utility-bills = Facturas de servicios públicos
 vehicle-details = Detalles del vehículo
+vehicle-identification-numbers-vins = Números de identificación de vehículos (VINs)
 website-activity = Actividad del sitio web
 work-habits = Hábitos laborales
 years-of-birth = Años de nacimiento

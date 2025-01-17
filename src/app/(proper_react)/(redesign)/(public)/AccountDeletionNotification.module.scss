@@ -1,0 +1,44 @@
+@use "../../../tokens";
+
+.notification[role="alert"] {
+  position: absolute;
+  top: tokens.$spacing-xs;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: tokens.$spacing-md;
+  padding: tokens.$spacing-xs;
+  min-width: tokens.$content-sm;
+  background-color: tokens.$color-blue-50;
+  color: tokens.$color-white;
+  border-radius: tokens.$border-radius-sm;
+  box-shadow: tokens.$box-shadow-sm;
+  animation: fade-in 400ms;
+
+  span {
+    padding: tokens.$spacing-sm tokens.$spacing-md;
+  }
+
+  .dismissButton {
+    padding: tokens.$spacing-md;
+    background-color: transparent;
+    border-style: none;
+    color: tokens.$color-white;
+    border-radius: tokens.$border-radius-sm;
+    cursor: pointer;
+
+    &:hover {
+      background-color: tokens.$color-blue-60;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

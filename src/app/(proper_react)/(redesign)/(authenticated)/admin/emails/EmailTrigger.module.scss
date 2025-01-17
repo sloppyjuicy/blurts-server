@@ -1,0 +1,41 @@
+@use "../../../../../tokens";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-2xl;
+  background-color: tokens.$color-grey-05;
+  height: 100%;
+  padding: tokens.$layout-lg tokens.$layout-2xl;
+
+  @media screen and (max-width: tokens.$screen-lg) {
+    padding: tokens.$spacing-lg;
+  }
+}
+
+.addressSection {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-sm;
+
+  .addressPicker {
+    display: flex;
+    align-items: center;
+    gap: tokens.$spacing-md;
+
+    label {
+      font: tokens.$text-body-lg;
+      font-weight: 700;
+    }
+
+    select {
+      padding: tokens.$spacing-sm;
+    }
+  }
+}
+
+.triggers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-lg;
+}

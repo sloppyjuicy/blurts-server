@@ -1,105 +1,83 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-logo-alt = { -brand-mozilla-monitor }
+email-header-button-sign-in = Eñemboheraguapy
+
+## Email footers
+
+email-footer-support-heading = ¿Eporanduse { -brand-mozilla-monitor } rehegua?
+email-footer-support-content = Eike ore <support-link>Ñepytyvõha rendápe</support-link> eñepytyvõkuaa hag̃ua
+email-footer-trigger-transactional = Og̃uahẽ ko ñanduti veve eñemboheraguapýre { -brand-mozilla-monitor } ndive.
+email-footer-source-hibp = Mba’ekuaarã ñembyai ome’ẽva <hibp-link>{ -brand-HIBP }</hibp-link>
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = Ñemigua
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = { -product-name } Marandu
-report-date = Marandu Arange:
-email-address = Ñanduti veve kundaharape:
 # A link to legal information about mozilla products.
 legal = Añetegua
-# Unsubscribe link in email.
-email-unsub-link = Ñemboheraguapy jeheja
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb =
-    Og̃uahẽ ndéve ñandutiveve eñemboheraguapýre { -product-name } ñembyaípe. 
-    ¿Ndereipotavéimarõ? { $unsubLink }. Kóva ha’e ñandutiveve ijeheguíva. Eikotevẽro pytyvõ, eike kuatiarogue { $faqLink }-pe.
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy =
-    Og̃uahẽ ndéve ko ñanduti veve eñemboheguapy rupi ha omboúta ndéve kyhyjerã { -product-name }. 
-    Kóva ha’e ñanduti veve ijeheguíva. Eñepytyvõ hag̃ua eike { $faqLink }-pe.
 # Button text
 verify-email-cta = Ñanduti veve jehechajey
-# Button text
-see-all-breaches = Ehechapaite ñembyai
 # Headline of verification email
 email-link-expires = Ko juajuha opáta 24 aravópe
-email-verify-blurb = Ehechajey ne ñanduti veve embojuaju hag̃ua { -product-name } ha eñemboheraguapy og̃uahẽ hag̃ua kyhyjerã ñembyai rehegua.
-# Email headline
-email-found-breaches-hl = Ko’ãva ne mba’ekuaarã ñembyai oikova’ekue
-# Email headline
-email-breach-summary-for-email = Ñembyai oikova’ekue { $userEmail } peg̃uarã
-# Email headline
-email-no-breaches-hl = { $userEmail } ojehecha 0 mba’ekuaarã ñembyai kuaapyrépe
-# Email headline
-email-alert-hl = { $userEmail } ojehecha mba’ekuaarã ñembyai pyahúpe
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } ojuhu ne marandu ko’ã ñembyaípe
 # Subject line of email
 email-subject-no-breaches = { -product-name } ndojuhúi ñembyai kuaapyrépe
 # Subject line of email
 email-subject-verify = Ehechajey ne ñanduti veve { -product-name } peg̃uarã
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = Eikuaave { $fxmLink } rehegua
-email-sensitive-disclaimer =
-    Pe ñembiai rehegua ikangy rupi, noñemoherakuãmo’ãi ñandutiveve kundaharape ivaíva. 
-    Og̃uahẽ ndéve ko kyhyjerã ojehechakuaa rupi nemba’eha ko ñandutiveve kundaharape.
 fxm-warns-you-no-breaches =
     { -product-name } nemongyhyje mba’ekuaarã ñembyai rehegua ombyaikuaáva ne maranduete. 
     Ko’ág̃a rupi ndojejuhúi mba’eve. Romondóta ndéve kyhyjerã ne ñandutiveve kundaharape oñembyaikuaáramo.
-fxm-warns-you-found-breaches =
-    { -product-name } nemongyhyje mba’ekuaarã ñembyaire omomarãkuaáva ne maranduete. 
-    Eñemboheraguapy og̃uahẽ hag̃ua ndéve kyhyjerã ne ñandutiveve kundaharape imarãkuáramo.
 email-breach-alert-blurb =
     { -product-name } omombe’u ndéve mba’ekuaarã ñembyai ne mba’eteéva rehegua. 
     
     Og̃uahẽramo mba’emimi mba’ekuaarã ñembyai rehegua ambue mba’apohaguasu guive.
-# List headline
-faq-list-headline = Porandu py’ỹiguáva
-# Link Title
-faq-v2-1 = Ndaikuaái ko mba’apohaguasu térã ñanduti renda. ¿Mba’ére aime ko ñembyaípe?
-# Link Title
-faq-v2-2 = ¿Ajapova’erã mba’e oiko rire ñembyai heta arýma, térã kóva ha’e mba’ete itujáva?
-# Link Title
-faq-v2-3 = Ajuhu ramoite peteĩ mba’ekuaarã ñembyai. ¿Mba’e ajapokuaa?
-# Link Title
-faq-v2-4 = ¿Mba’éicha oipuru { -product-name } tendakuéra imarandu ñemívape?
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>Emoheñói { -brand-fxa }</a>, reigua ha ikatúta embojuaju 15 ñanduti veve peve.
-# Section headline
-monitor-another-email = ¿Eporanduse ambue ñanduti veve rupive?
-# Subject line of email
-pre-fxa-subject = { -product-name } mbohekopyahu
-pre-fxa-headline = ¿Mba’e pe iñambuéva { -product-name } ndive
-pre-fxa-blurb =
-    Kóva ha’e iñambuéva eñemboheraguapy guive { -product-name }-pe, pe mba’epuru 
-    ohechaa mba’ekuaarã ñembyai ojekuaáva ne marandurãite. Rombojuajuhína Firefox mba’ete ndive.
-pre-fxa-tout-1 = Ejesarekóke ñembyai pyahúre
-pre-fxa-p-1 =
-    <a>Emoheñói mba’ete</a> ehecha hag̃ua 15 ñanduti veve 
-    ehechakuaa hag̃ua mba’ekuaarã ñembyai. Pembojuaju hag̃ua oimeraẽva ñandutiveve eipuruva’ekue emoheñói hag̃ua ñandutípe.
-pre-fxa-tout-2 = Ereko mba’erupa tuichaháicha
-pre-fxa-p-2 =
-    Ejuhu opaite mba’ekuaarã ñembyai peteĩ tendápe año eikuaa hag̃ua mba’e ñe’ẽñemípa emoambuéta. 
-    Pe ñembyai kora ehechakuaa peteĩ mba’ete rupive.
-pre-fxa-tout-3 = Og̃uahẽ meméta kyhyjerã ñanduti vevépe
-pre-fxa-p-3 =
-    Og̃uahẽta ndéve kyhyjerã { -product-name } guive. Reñemomarandúta ne marandu 
-    osẽramo mba’ekuaarã ñembyai pyahúpe.
-# Button at the bottom of pre-fxa email.
-create-account = Emoheñói mba’ete
-# More security products
-more-products-headline = Eñemo’ã ambue ore apopyre ndive
-more-products-vpn = Ñemo’ã opaite ne mba’e’okápe, peteĩteĩva mba’e’okápe.
-more-products-cta-vpn = Erekóke { -product-name-vpn }
-more-products-relay = Eñomi ne ñanduti veve kundaharape emo’ã hag̃ua nde reraite.
-more-products-cta-relay = Erekóke { -product-name-relay }
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = Mba’ekuaarã ñembogua ome’ẽva <a { $hibp-link-attr }>{ -brand-HIBP }</a>
+
+## Verification email
+
+email-verify-heading = Emo’ã ne mba’ekuaarã, eñepyrũ ko’ag̃aite
+email-verify-subhead = Ehechajey ne ñanduti veve emo’ãkuaa hag̃ua mba’ekuaarã ñembogua rire.
+email-verify-simply-click = Eikutu pe juajuha emohu’ã hag̃ua ne mbaéte jehechajey.
+
+## Breach report
+
+email-breach-summary = Na’ápe ne mba’ekuaarã ñembogua rapykuere
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = Ne mba’ete jeheka rapykuere { $email-address } ohechakuaa ne ñanduti veve oñembyaikuaaha. Romombe’u ndéve emyatyrõ hag̃ua ko ñembogua rehegua.
+email-dashboard-cta = Eho ñangarekoha rupápe
+
+## Breach alert
+
+# Deprecated after the redesigned breach alert email is launched
+email-spotted-new-breach = Rohecha oĩha mba’ekuaarã ñembogua pyahu
+
+## Redesigned breach alert email
+
+email-breach-alert-all-subject = Ojejuhu mba’ekuaarã ñembyai pyahu
+email-breach-alert-all-preview = Rombohapéta emoĩporãkuaa hag̃uáicha.
+email-breach-alert-all-hero-heading = Ehecha eimépara’e mba’ekuaarã ñembyaípe
+email-breach-alert-all-hero-subheading = Ani rejepy’apy, roipytyvõta esẽ hag̃ua ko apañuáigui.
+email-breach-alert-all-lead = { -brand-mozilla-monitor } ohecha ko mba’ekuaarã ñembogua oikehápe marandu nde reheguaite:
+email-breach-alert-all-source-title = Ñembyai ñepyrũha:
+email-breach-alert-all-data-points-title = Ne mba’ekuaarã imarãkuaa:
+email-breach-alert-all-next-steps-lead = Rombohapéta mba’éichapa emoĩporãta ko mba’ekuaarã ñembogua.
+email-breach-alert-all-next-steps-cta-label = Ñañepyrũkatu
+email-breach-alert-all-next-steps-button-dashboard = Eho ñangarekoha rupápe

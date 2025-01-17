@@ -1,0 +1,215 @@
+@use "sass:math";
+
+@use "../../tokens";
+
+.stepsWrapper {
+  @include tokens.no-focus-outline;
+  margin-block-end: tokens.$layout-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: tokens.$spacing-lg;
+
+  @media screen and (min-width: tokens.$screen-md) {
+    height: 33%;
+  }
+
+  @media screen and (min-width: tokens.$screen-md) {
+    padding-inline: tokens.$spacing-2xl;
+  }
+
+  @media screen and (min-width: tokens.$screen-lg) {
+    padding-inline: tokens.$layout-xl;
+  }
+
+  .steps {
+    @include tokens.no-focus-outline;
+  }
+}
+
+@media screen and (min-width: tokens.$screen-md) {
+  .steps {
+    $stepGap: tokens.$layout-xl;
+    $iconDiameter: 40px;
+    $checkIconDiameter: 15px;
+    $iconBorderWidth: 4px;
+    $connectingLineHeight: 4px;
+
+    padding-inline-start: 0;
+    list-style-type: none;
+    display: flex;
+    gap: $stepGap;
+    position: relative;
+    max-width: tokens.$content-md;
+    align-items: center;
+
+    .progressBarLineContainer {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      .progressBarLineWrapper {
+        width: 100%;
+        height: 3px;
+        background-color: tokens.$color-grey-30;
+        position: relative;
+
+        .activeProgressBarLine {
+          background-color: tokens.$color-purple-10;
+          height: 3px;
+          position: absolute;
+
+          &.hasFourSteps {
+            // These are not arbitrary "magic numbers." The width represents an increment of 100/6 due to the progress bar's ratio.
+            &.duringDataBrokerProfiles {
+              width: calc(100% / 6 + $iconDiameter);
+            }
+            &.beginHighRiskDataBreaches {
+              width: math.div(100%, 6) * 2;
+            }
+            &.duringHighRiskDataBreaches {
+              width: math.div(100%, 6) * 3;
+            }
+            &.beginLeakedPasswords {
+              width: math.div(100%, 6) * 4;
+            }
+            &.duringLeakedPasswords {
+              width: calc(100% / 6 * 5 - $iconDiameter);
+            }
+            &.beginSecurityRecommendations {
+              width: 100%;
+            }
+          }
+
+          &.hasThreeSteps {
+            &.duringHighRiskDataBreaches {
+              width: 100% / 3;
+            }
+            &.beginLeakedPasswords {
+              width: 50%;
+            }
+            &.duringLeakedPasswords {
+              width: math.div(100%, 3) * 2;
+            }
+            &.beginSecurityRecommendations {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: tokens.$spacing-xs;
+      text-align: center;
+      font: tokens.$text-body-xs;
+      font-weight: 400;
+      color: tokens.$color-grey-30;
+
+      &.navigationItem {
+        // Overlap the horizontal line
+        z-index: 1;
+      }
+
+      .stepIcon {
+        width: $iconDiameter;
+        height: $iconDiameter;
+        margin-block: $iconBorderWidth;
+        pointer-events: none;
+        user-select: none;
+        box-sizing: border-box;
+
+        & > * {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          padding: tokens.$spacing-sm;
+          background-color: tokens.$color-grey-30;
+
+          &.checkIcon {
+            color: tokens.$color-white;
+            padding: 12px; // Specific padding for check mark icon
+          }
+        }
+      }
+
+      &[aria-current="step"] .stepIcon > * {
+        outline: $iconBorderWidth solid tokens.$color-purple-10;
+      }
+
+      .stepLabel {
+        padding-top: tokens.$layout-md;
+        position: absolute;
+        width: 100px;
+      }
+
+      &[aria-current="step"] .stepLabel {
+        padding-top: calc(tokens.$layout-md + tokens.$spacing-sm);
+      }
+
+      &.isCompleted,
+      &[aria-current="step"] {
+        color: tokens.$color-purple-70;
+
+        .stepIcon > * {
+          background-color: tokens.$color-purple-70;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: calc(tokens.$screen-md - 1px)) {
+  .steps {
+    padding-inline-start: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: tokens.$spacing-sm;
+
+    li {
+      .stepIcon {
+        // On mobile, the actual step images aren't actually shown; instead, we
+        // display flat horizontal lines, which we simulate by giving the images
+        // a 0 height and a border. The images are <1kB in size, so that
+        // shouldn't matter too much.
+        height: 0;
+        border: 3px solid tokens.$color-grey-30;
+        border-radius: 3px;
+        min-width: tokens.$layout-sm;
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+
+        svg {
+          display: none;
+        }
+      }
+
+      &[aria-current="step"] .stepIcon {
+        border-color: tokens.$color-purple-10;
+      }
+
+      &.isCompleted .stepIcon {
+        border-color: tokens.$color-purple-70;
+      }
+
+      .stepLabel {
+        padding-block: tokens.$spacing-sm;
+        padding-inline: tokens.$spacing-md;
+        color: tokens.$color-purple-70;
+        font: tokens.$text-body-xs;
+        font-weight: 600;
+        top: tokens.$spacing-lg;
+      }
+
+      &:not([aria-current="step"]) .stepLabel {
+        @include tokens.visually-hidden;
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Kontosaldoer
 address-book-contacts = Adressebokskontakter
@@ -14,7 +19,7 @@ avatars = Avatarer
 bank-account-numbers = Bankkontonummer
 beauty-ratings = Skjønnhetsvurderinger
 biometric-data = Biometriske data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Personopplysninger
 browser-user-agent-details = Informasjon om nettleserens brukeragent
@@ -54,11 +59,13 @@ family-structure = Familiestruktur
 financial-investments = Finansielle investeringer
 financial-transactions = Finansielle transaksjoner
 fitness-levels = Treningsnivå
+flights-taken = Flyreiser tatt
 genders = Kjønn
 geographic-locations = Geografiske plasseringer
 government-issued-ids = ID-kort utstedt av myndighetene
 health-insurance-information = Informasjon om helseforsikring
 historical-passwords = Historiske passord
+hiv-statuses = HIV-status
 home-loan-information = Informasjon om boliglån
 home-ownership-statuses = Status for boligeierskap
 homepage-urls = Hjemmesideadresser
@@ -69,7 +76,7 @@ instant-messenger-identities = Identiteter på Instant messenger-tjenester
 ip-addresses = IP-adresser
 job-applications = Jobbsøknader
 job-titles = Jobbtitler
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Bilskilt
 living-costs = Levekostnader
 login-histories = Innloggingshistorikk
@@ -91,7 +98,7 @@ password-hints = Passordhint
 password-strengths = Passordstyrke
 passwords = Passord
 payment-histories = Betalingshistorikk
-payment-methods = Betalingsmetoder
+payment-methods = Betalingsmåter
 personal-descriptions = Personlige beskrivelser
 personal-health-data = Personlige helsedata
 personal-interests = Personlige interesser

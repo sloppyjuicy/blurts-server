@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Konto-saldoer
 address-book-contacts = Adressebogs-kontakter
@@ -14,7 +19,7 @@ avatars = Avatarer
 bank-account-numbers = Bankkontonumre
 beauty-ratings = Skønheds-vurderinger
 biometric-data = Biometriske data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Personoplysninger
 browser-user-agent-details = Information om browserens user agent
@@ -25,6 +30,8 @@ career-levels = Karriere-niveauer
 cellular-network-names = Navne på mobilnetværk
 charitable-donations = Donationer til velgørende formål
 chat-logs = Chat-logs
+citizenship-statuses = Status for statsborgerskab
+clothing-sizes = Tøjstørrelser
 credit-card-cvv = CVV-koder for betalingskort
 credit-cards = Betalingskort
 credit-status-information = Informationer om kreditværdighed
@@ -34,6 +41,9 @@ customer-interactions = Kunde-interaktioner
 dates-of-birth = Fødselsdatoer
 deceased-date = Dødsdato
 deceased-statuses = Status for afdøde
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Instruktioner til leverandøren
 device-information = Information om enheder
 device-serial-numbers = Serienummer på enheder
 device-usage-tracking-data = Sporingsdata for brug af enheder
@@ -54,11 +64,13 @@ family-structure = Familie-struktur
 financial-investments = Finansielle investeringer
 financial-transactions = Finansielle transaktioner
 fitness-levels = Konditions-niveauer
+flights-taken = Flyvninger foretaget
 genders = Køn
 geographic-locations = Geografiske placeringer
 government-issued-ids = ID-kort udstedt af regeringer
 health-insurance-information = Information om sundhedsforsikringer
 historical-passwords = Tidligere adgangskoder
+hiv-statuses = HIV-status
 home-loan-information = Information om boliglån
 home-ownership-statuses = Status for boligejerskab
 homepage-urls = Websteds-adresser
@@ -69,10 +81,13 @@ instant-messenger-identities = Identiteter på Instant messenger-tjenester
 ip-addresses = IP-adresser
 job-applications = Jobansøgninger
 job-titles = Jobtitler
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Nummerplader
 living-costs = Leveomkostninger
+# This string refers to financial loans.
+loan-information = Oplysninger om lån
 login-histories = Indlognings-historik
+loyalty-program-details = Detaljer om loyalitetsprogrammet
 mac-addresses = MAC-adresser
 marital-statuses = Civilstand
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Navne
 nationalities = Nationaliteter
 net-worths = Formue
 nicknames = Tilnavne
+# no data classes found
+none-data-class = Ingen
 occupations = Erhverv
+# various data classes grouped together
+other-data-class = Andet
 parenting-plans = Forældre-planer
 partial-credit-card-data = Delvis betalingskorts-data
 partial-dates-of-birth = Delvise fødselsdatoer
+partial-phone-numbers = Delvise telefonnumre
 passport-numbers = Pasnumre
 password-hints = Adgangskode-tips
 password-strengths = Adgangskode-styrke
@@ -128,6 +148,7 @@ spouses-names = Ægtefælles navn
 support-tickets = Support-spørgsmål
 survey-results = Undersøgelses-resultater
 taxation-records = Skatte-oplysninger
+telecommunications-carrier = Teleoperatører
 time-zones = Tidszoner
 travel-habits = Rejsevaner
 user-statuses = Bruger-statusser
@@ -135,6 +156,7 @@ user-website-urls = Adresser til bruger-websteder
 usernames = Brugernavne
 utility-bills = El- og varme-regninger
 vehicle-details = Detaljer om køretøjer
+vehicle-identification-numbers-vins = VIN-mærkninger (Stelnumre)
 website-activity = Websteds-aktivitet
 work-habits = Arbejdsvaner
 years-of-birth = Fødselsår

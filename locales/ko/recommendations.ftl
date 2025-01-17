@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = 신용 보고서 검토
 # Link title
@@ -10,9 +14,10 @@ rec-ssn =
 rec-pw-1-subhead = 비밀번호 변경
 # Link title
 rec-pw-1-cta = 이 사이트의 비일번호 변경
-rec-pw-1 =
-    원래 사용하던 암호와 완전히 다르게 설정하십시오.
-    둘 이상의 관계 없는 단어를 이어 만드는 것도 좋은 방법 중 하나입니다.
+rec-pw-1-2 =
+    원래 사용하던 암호와 완전히 다르게 설정하세요.
+    둘 이상의 관계없는 단어를 합치고 숫자와 기호를 추가하여
+    만드는 것도 좋은 방법 중 하나입니다.
 # Recommendation subhead
 rec-pw-2-subhead = 동일한 비밀번호를 사용하여 다른 로그인 업데이트
 # Link title
@@ -24,6 +29,10 @@ rec-pw-2 =
 rec-pw-3-subhead = 암호 관리자를 사용하여 어디서든 암호를 가져오기
 # Link title
 rec-pw-3-cta = { -brand-lockwise } 받기
+rec-pw-3-fx = { -brand-lockwise }를 사용하여 어디에서나 { -brand-name }에 저장된 비밀번호에 안전하게 접근할 수 있습니다.
+rec-pw-3-non-fx =
+    { -brand-lockwise }를 사용하여 휴대전화나 태블릿에서 
+    사용자의 비밀번호를 살펴보고 안전하게 접근할 수 있습니다.
 # Recommendation subhead
 rec-pw-4-subhead = 2단계 인증 (2FA) 설정
 # Link title
@@ -43,24 +52,50 @@ rec-cc =
     신용카드에 이상한 청구가 있지는 않은지 확인하세요.
     신용 카드 발급 기관으로부터 새 카드를 발급받아야 할 지도 모릅니다.
 # Recommendation subhead
-rec-ip-subhead = IP 주소를 숨기는 서비스 사용
-# Link title
-rec-ip-us-cta = { -brand-fpn } 사용해보기
+rec-email-mask-subhead = 이메일 마스크를 사용하세요
+rec-email-cta = { -brand-relay } 써보기
+rec-email = 실제 이메일 주소를 제공하는 것은 해커나 추적기가 여러분의 비밀번호를 알아내거나 또는 추적 대상이 되도록 만들 수 있습니다. { -brand-relay }와 같은 서비스는 고객의 실제 수신함으로 이메일을 전송해주는 서비스로 실제 이메일 주소를 숨겨줍니다.
+# Recommendation subhead
+rec-ip-subhead-2 = VPN을 사용하여 IP 주소를 가리세요
 # Recommendation subhead
 rec-moz-vpn-cta = { -brand-mozilla-vpn } 사용해보기
+rec-moz-vpn-update-2 =
+    인터넷 프로토콜 주소(IP 주소)는 사용자의 위치와
+    인터넷 서비스 제공 업체를 정확히 파악합니다. { -brand-mozilla-vpn } 같은
+    서비스는 IP 주소를 마스킹하여 사용자의 위치를 숨깁니다.
 rec-hist-pw-subhead = 비밀번호 재사용 방지
 # Link title
 rec-hist-pw-cta-fx = { -brand-name }에서 로그인 보기
+rec-hist-pw =
+    모든 계정에서 고유하고 강력한 암호를 사용하세요. 데이터 침해에 하나의
+    비밀번호가 유출된 경우 그 로그인 하나만 업데이트하면 됩니다.
 # Recommendation subhead
 rec-sec-qa-subhead = 보안 질문에 대한 고유한 답변 만들기
+rec-sec-qa =
+    많은 웹사이트에서 동일한 질문을 합니다. 하나의 답변이 노출되면
+    정보가 공개됩니다. 임의의 답변을 길게 만들어 안전한 곳에 저장하세요.
 # Recommendation subhead
 rec-phone-num-subhead = 전화 번호 공유 안하기
+rec-phone-num =
+    새로운 계정이나 서비스에 가입할 때 되도록 전화번호를
+    제공하지 마세요. 필수 사항이 아니라면 전화번호를 입력하지 마세요.
 # Recommendation subhead
 rec-dob-subhead = PIN에 개인 정보를 사용하지 않기
+rec-dob =
+    생년월일은 공개 기록에서 쉽게 찾을 수 있으므로
+    비밀번호와 PIN에 사용하지 않아야 합니다. 사용자의
+    생일을 아는 사람 또한 사용자의 PIN을 쉽게 추측할 수 있습니다.
 # Recommendation subhead
 rec-pins-subhead = PIN 보안 강화
+rec-pins =
+    강력한 PIN은 생년월일이나 주소 등의 개인 정보를 포함하지 않습니다.
+    사용자만 아는 숫자여야 하며 쉽게 추측할 수 있어서는 안 됩니다.
 # Recommendation subhead
 rec-address-subhead = 비밀번호에 주소 사용하지 않기
+rec-address =
+    주소 또는 어렸을 때 살았던 거리 이름은 비밀번호로서
+    강력하지 않습니다. 이러한 정보는 공개 기록에서 쉽게
+    찾을 수 있어 비밀번호를 쉽게 추측할 수 있습니다.
 # Recommendation subhead
 rec-gen-1-subhead = 모든 계정에 고유하고 강력한 비밀번호 사용
 # Link title

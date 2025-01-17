@@ -1,4 +1,8 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Breach Data Classes
 
 account-balances = Tisgar n yimiḍanen
 address-book-contacts = Inermisen n yimedlis n tensa
@@ -82,7 +86,11 @@ names = Ismawen
 nationalities = Taɣlent
 net-worths = Azal yeṣfan
 nicknames = Meffer ismawen
+# no data classes found
+none-data-class = Ula yiwen
 occupations = Ixeddimen
+# various data classes grouped together
+other-data-class = Wayeḍ
 parenting-plans = amtawa n yimawlan
 partial-credit-card-data = kra n yisefka n tkarḍiwin n usmad
 partial-dates-of-birth = Azemz n tlalit abruyan
@@ -124,7 +132,7 @@ social-connections = aẓṭṭa n tmussniwin
 social-media-profiles = imuɣna n yiẓeḍwa n tmetti
 social-security-numbers = uṭṭunen n tɣellist inmettiyen
 spoken-languages = tutlayin tettmeslayeḍ
-spouses-names = Ismawen n uzgaz d tmeṭṭut-is
+spouses-names = Ismawen n urgaz d tmeṭṭut-is
 support-tickets = asuter n tallelt
 survey-results = igmaḍ n tefranin
 taxation-records = Ikalasen n tebzert

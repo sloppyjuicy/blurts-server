@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Số dư tài khoản
 address-book-contacts = Danh bạ
@@ -14,7 +19,7 @@ avatars = Ảnh đại diện
 bank-account-numbers = Số tài khoản ngân hàng
 beauty-ratings = Xếp hạng sắc đẹp
 biometric-data = Dữ liệu sinh trắc học
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Tiểu sử
 browser-user-agent-details = Chi tiết chuỗi nhận dạng trình duyệt
@@ -25,6 +30,8 @@ career-levels = Cấp độ nghề nghiệp
 cellular-network-names = Tên mạng di động
 charitable-donations = Quyên góp từ thiện
 chat-logs = Nhật ký trò chuyện
+citizenship-statuses = Tình trạng công dân
+clothing-sizes = Kích cỡ quần áo
 credit-card-cvv = Thẻ tín dụng CVV
 credit-cards = Thẻ tín dụng
 credit-status-information = Thông tin trạng thái tín dụng
@@ -34,6 +41,9 @@ customer-interactions = Tương tác của khách hàng
 dates-of-birth = Ngày sinh
 deceased-date = Ngày mất
 deceased-statuses = Tình trạng đã mất
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Hướng dẫn giao hàng
 device-information = Thông tin thiết bị
 device-serial-numbers = Số sê-ri thiết bị
 device-usage-tracking-data = Dữ liệu theo dõi sử dụng thiết bị
@@ -54,11 +64,13 @@ family-structure = Cơ cấu gia đình
 financial-investments = Sự đầu tư tài chính
 financial-transactions = Giao dịch tài chính
 fitness-levels = Mức độ thể dục
+flights-taken = Các chuyến bay đã thực hiện
 genders = Giới tính
 geographic-locations = Vị trí địa lý
 government-issued-ids = ID do chính phủ cấp
 health-insurance-information = Thông tin bảo hiểm y tế
 historical-passwords = Mật khẩu quá khứ
+hiv-statuses = Tình trạng nhiễm HIV
 home-loan-information = Thông tin cho vay mua nhà
 home-ownership-statuses = Tình trạng sở hữu nhà
 homepage-urls = URL trang chủ
@@ -69,10 +81,13 @@ instant-messenger-identities = Nhận dạng tin nhắn tức thời
 ip-addresses = Các địa chỉ IP
 job-applications = Đơn xin việc
 job-titles = Chức danh công việc
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Biển số xe
 living-costs = Chi phí sinh hoạt
+# This string refers to financial loans.
+loan-information = Thông tin khoản vay
 login-histories = Lịch sử đăng nhập
+loyalty-program-details = Chi tiết chương trình khách hàng thân thiết
 mac-addresses = Địa chỉ MAC
 marital-statuses = Tình trạng hôn nhân
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Tên
 nationalities = Quốc tịch
 net-worths = Giá trị ròng
 nicknames = Biệt danh
+# no data classes found
+none-data-class = Không có
 occupations = Nghề nghiệp
+# various data classes grouped together
+other-data-class = Khác
 parenting-plans = Kế hoạch nuôi dạy con
 partial-credit-card-data = Dữ liệu một phần thẻ tín dụng
 partial-dates-of-birth = Một phần ngày sinh
+partial-phone-numbers = Một phần số điện thoại
 passport-numbers = Số hộ chiếu
 password-hints = Mật khẩu gợi ý
 password-strengths = Độ mạnh mật khẩu
@@ -128,6 +148,7 @@ spouses-names = Tên vợ/chồng
 support-tickets = Vé hỗ trợ
 survey-results = Kết quả khảo sát
 taxation-records = Hồ sơ thuế
+telecommunications-carrier = Các hãng viễn thông
 time-zones = Múi giờ
 travel-habits = Thói quen du lịch
 user-statuses = Trạng thái người dùng
@@ -135,6 +156,7 @@ user-website-urls = URL trang web của người dùng
 usernames = Tên đăng nhập
 utility-bills = Các hóa đơn tiện ích
 vehicle-details = Chi tiết về xe cộ
+vehicle-identification-numbers-vins = Số nhận dạng phương tiện (VINs)
 website-activity = Hoạt động trang web
 work-habits = Thói quen làm việc
 years-of-birth = Năm sinh

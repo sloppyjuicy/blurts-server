@@ -1,0 +1,8 @@
+@use "../../tokens";
+
+.link {
+  align-items: center;
+  color: tokens.$color-blue-50;
+  display: inline-flex;
+  gap: 0.25em;
+}

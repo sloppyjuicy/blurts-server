@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = 계좌 잔고
 address-book-contacts = 주소록 연락처
 age-groups = 연령대
 ages = 나이
+# Refers to medical appointments.
+appointments = 예약
 apps-installed-on-devices = 기기에 설치된 앱
 astrological-signs = 점성술의 별자리
 audio-recordings = 녹음된 오디오
@@ -12,7 +19,7 @@ avatars = 아바타
 bank-account-numbers = 은행 계좌번호
 beauty-ratings = 미용 등급
 biometric-data = 생체 정보
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = 약력
 browser-user-agent-details = 브라우저 유저 에이전트 정보
@@ -23,6 +30,8 @@ career-levels = 경력 수준
 cellular-network-names = 셀룰러 네트워크 이름
 charitable-donations = 기부 내역
 chat-logs = 대화 내용
+citizenship-statuses = 시민권 상태
+clothing-sizes = 의류 사이즈
 credit-card-cvv = 신용카드 CVV
 credit-cards = 신용카드
 credit-status-information = 신용정보
@@ -32,6 +41,9 @@ customer-interactions = 고객 상호작용
 dates-of-birth = 생년월일
 deceased-date = 사망일자
 deceased-statuses = 사망 여부
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = 배송 안내
 device-information = 기기 정보
 device-serial-numbers = 기기 일련 번호
 device-usage-tracking-data = 기기 사용 추적 데이터
@@ -52,11 +64,13 @@ family-structure = 가족 구성
 financial-investments = 금융 투자
 financial-transactions = 금융거래 내역
 fitness-levels = 피트니스 수준
+flights-taken = 탑승한 항공편
 genders = 성별
 geographic-locations = 지리적 위치
 government-issued-ids = 정부가 발급한 신분증
 health-insurance-information = 건강보험 정보
 historical-passwords = 비밀번호 이력
+hiv-statuses = HIV 상태
 home-loan-information = 주택 융자 정보
 home-ownership-statuses = 주택 소유 여부
 homepage-urls = 홈페이지 URL
@@ -67,8 +81,13 @@ instant-messenger-identities = 인스턴트 메신저 ID
 ip-addresses = IP 주소
 job-applications = 입사 지원서
 job-titles = 직위
+# This string refers to vehicle license plates.
+licence-plates = 번호판
 living-costs = 생활비
+# This string refers to financial loans.
+loan-information = 대출 정보
 login-histories = 로그인 기록
+loyalty-program-details = 로열티 프로그램 세부정보
 mac-addresses = MAC 주소
 marital-statuses = 결혼 여부
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -78,10 +97,15 @@ names = 이름
 nationalities = 국적
 net-worths = 순자산
 nicknames = 별명
+# no data classes found
+none-data-class = 없음
 occupations = 직업
+# various data classes grouped together
+other-data-class = 기타
 parenting-plans = 육아 계획
 partial-credit-card-data = 신용카드 데이터 일부
 partial-dates-of-birth = 생년월일 일부
+partial-phone-numbers = 부분 전화번호
 passport-numbers = 여권 번호
 password-hints = 비밀번호 힌트
 password-strengths = 비밀번호 보안 등급
@@ -124,6 +148,7 @@ spouses-names = 배우자 이름
 support-tickets = 지원 티켓
 survey-results = 조사 결과
 taxation-records = 과세 기록
+telecommunications-carrier = 통신 사업자
 time-zones = 시간대
 travel-habits = 여행 습관
 user-statuses = 사용자 상태
@@ -131,6 +156,7 @@ user-website-urls = 사용자 웹 사이트 URL
 usernames = 사용자 이름
 utility-bills = 공과금
 vehicle-details = 차량 세부 정보
+vehicle-identification-numbers-vins = 차량 식별 번호(VIN)
 website-activity = 웹사이트 활동
 work-habits = 업무 습관
 years-of-birth = 출생년도

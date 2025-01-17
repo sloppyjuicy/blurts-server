@@ -1,0 +1,78 @@
+# See the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      eslint:
+        patterns:
+          - "@typescript-eslint/*"
+          - "eslint"
+          - "eslint-*"
+        exclude-patterns:
+          - "eslint-config-next"
+      jest:
+        patterns:
+          - "babel-jest"
+          - "jest"
+          - "jest-environment-jsdom"
+      testing-library:
+        patterns:
+          - "@testing-library/dom"
+          - "@testing-library/react"
+          - "@testing-library/user-event"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "react-test-renderer"
+      sentry:
+        patterns:
+          - "@sentry/*"
+      aws-sdk:
+        patterns:
+          - "@aws-sdk/*"
+      storybook:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
+        exclude-patterns:
+          - "eslint-config-next"
+      fluent:
+        patterns:
+          - "@fluent/*"
+      nextjs:
+        patterns:
+          - "eslint-config-next"
+          - "next"
+          - "@next/*"
+      react-aria:
+        patterns:
+          - "react-aria"
+          - "react-stately"
+      stylelint:
+        patterns:
+          - "stylelint"
+          - "stylelint-scss"
+          - "stylelint-config-recommended-scss"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+          - dependency-name: "node"
+            # Node 22 will become an LTS version on 2024-10-29; see
+            # https://nodejs.org/en/next-data/release-data
+            # Hence, we'll want to adopt 22.x releases after the last one
+            # before that date.
+            # Odd-numbered versions are unstable releases, so skip those too.
+            versions: ["<=22.10.0", "23.x", "25.x", "27.x", "29.x"]

@@ -1,0 +1,24 @@
+@use "../../tokens";
+
+.listBox {
+  list-style: none;
+  margin: 0;
+  padding: tokens.$spacing-sm 0;
+}
+
+.item {
+  background: tokens.$color-white;
+  color: color;
+  cursor: pointer;
+  outline: none;
+
+  &.isSelected {
+    background: tokens.$color-purple-10;
+  }
+  &.isFocused {
+    background: tokens.$color-grey-10;
+  }
+  &.isDisabled {
+    color: tokens.$color-grey-30;
+  }
+}

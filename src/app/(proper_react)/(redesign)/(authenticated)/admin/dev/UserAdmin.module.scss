@@ -1,0 +1,68 @@
+@use "../../../../../tokens";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-2xl;
+  background-color: tokens.$color-grey-05;
+  height: 100%;
+  padding: tokens.$layout-lg tokens.$layout-2xl;
+
+  @media screen and (max-width: tokens.$screen-lg) {
+    padding: tokens.$spacing-lg;
+  }
+}
+
+.header {
+  font: tokens.$text-title-xs;
+  font-weight: normal;
+
+  b {
+    font-weight: bold;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-2xl;
+
+  .userPicker {
+    flex: 1 0 auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: tokens.$spacing-2xl;
+    min-height: tokens.$layout-2xl;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$spacing-sm;
+      min-width: 50%;
+    }
+
+    input {
+      padding: tokens.$spacing-sm;
+      font: tokens.$text-body-md;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: tokens.$spacing-xl;
+
+    button {
+      flex: 1 1 25%;
+    }
+  }
+}
+
+.status {
+  background-color: tokens.$color-yellow-05;
+  border: 2px solid tokens.$color-yellow-20;
+  border-radius: tokens.$border-radius-sm;
+  padding: tokens.$spacing-md tokens.$spacing-lg;
+  font: tokens.$text-body-md;
+}

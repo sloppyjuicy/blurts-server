@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Tilisaldot
 address-book-contacts = Osoitekirjan yhteystiedot
@@ -14,7 +19,7 @@ avatars = Avatar-kuvat
 bank-account-numbers = Pankkitilinumerot
 beauty-ratings = Ulkonäköluokitukset
 biometric-data = Biometriset tiedot
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Henkilökuvaukset
 browser-user-agent-details = Selaimen user agent -tiedot
@@ -25,6 +30,8 @@ career-levels = Uratasot
 cellular-network-names = Matkapuhelinverkkojen nimet
 charitable-donations = Hyväntekeväisyyteen liittyvät lahjoitukset
 chat-logs = Keskustelulokit
+citizenship-statuses = Kansalaisuustiedot
+clothing-sizes = Vaatteiden koot
 credit-card-cvv = Luottokortin CVV
 credit-cards = Luottokortit
 credit-status-information = Luottokelpoisuustieto
@@ -34,6 +41,9 @@ customer-interactions = Asiakasteot
 dates-of-birth = Syntymäajat
 deceased-date = Kuolinpäivä
 deceased-statuses = Kuolintilatieto
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Toimitusohjeet
 device-information = Laitetiedot
 device-serial-numbers = Laitteen sarjanumerot
 device-usage-tracking-data = Laitteen käytön seurantatiedot
@@ -54,11 +64,13 @@ family-structure = Perherakenne
 financial-investments = Taloudelliset sijoitukset
 financial-transactions = Rahansiirrot
 fitness-levels = Kuntotasot
+flights-taken = Lentomatkat
 genders = Sukupuolet
 geographic-locations = Maantieteelliset sijainnit
 government-issued-ids = Viranomaisten myöntämät tunnisteet
 health-insurance-information = Terveysvakuutuksen tiedot
 historical-passwords = Aiemmat salasanat
+hiv-statuses = HIV-tilat
 home-loan-information = Asuntolainatiedot
 home-ownership-statuses = Asunnon omistussuhteen tilatieto
 homepage-urls = Kotisivujen osoitteet
@@ -69,10 +81,13 @@ instant-messenger-identities = Pikaviestimien identiteetit
 ip-addresses = IP-osoitteet
 job-applications = Työhakemukset
 job-titles = Työnimikkeet
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Rekisteritunnukset
 living-costs = Asumiskustannukset
+# This string refers to financial loans.
+loan-information = Lainatiedot
 login-histories = Kirjautumishistoria
+loyalty-program-details = Kanta-asiakasohjelman tiedot
 mac-addresses = MAC-osoitteet
 marital-statuses = Siviilisäädyt
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Nimet
 nationalities = Kansalaisuudet
 net-worths = Nettovarallisuudet
 nicknames = Nimimerkit
+# no data classes found
+none-data-class = Ei mitään
 occupations = Ammatit
+# various data classes grouped together
+other-data-class = Muu
 parenting-plans = Vanhemmuussuunnitelmat
 partial-credit-card-data = Osittaiset luottokorttitiedot
 partial-dates-of-birth = Osittaiset syntymäajat
+partial-phone-numbers = Osittaiset puhelinnumerot
 passport-numbers = Passinumerot
 password-hints = Salasanavihjeet
 password-strengths = Salasanojen vahvuudet
@@ -128,6 +148,7 @@ spouses-names = Puolison nimet
 support-tickets = Tukitiketit
 survey-results = Tutkimustulokset
 taxation-records = Verotustiedot
+telecommunications-carrier = Televiestintäoperaattorit
 time-zones = Aikavyöhykkeet
 travel-habits = Matkustustottumukset
 user-statuses = Käyttäjätilatiedot
@@ -135,6 +156,7 @@ user-website-urls = Käyttäjien sivustojen osoitteet
 usernames = Käyttäjätunnukset
 utility-bills = Käyttökulut
 vehicle-details = Ajoneuvon tiedot
+vehicle-identification-numbers-vins = Ajoneuvon tunnistenumerot (VIN)
 website-activity = Toiminta verkkosivustolla
 work-habits = Työskentelytottumukset
 years-of-birth = Syntymävuodet

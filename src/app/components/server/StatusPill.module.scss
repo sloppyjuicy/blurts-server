@@ -1,0 +1,40 @@
+@use "../../tokens";
+
+.pillWrapper {
+  font: tokens.$text-body-2xs;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+
+  @media screen and (min-width: tokens.$screen-sm) {
+    font: tokens.$text-body-xs;
+    min-width: 145px; // keep the width fixed
+  }
+
+  .pill {
+    padding: tokens.$spacing-xs tokens.$spacing-sm;
+    border-radius: tokens.$border-radius-sm;
+    font-weight: 600;
+
+    @media screen and (min-width: tokens.$screen-sm) {
+      padding: tokens.$spacing-xs 0;
+    }
+
+    &.actionNeeded {
+      background: tokens.$color-red-10;
+    }
+
+    &.requestedRemoval {
+      background: tokens.$color-violet-10;
+    }
+
+    &.inProgress {
+      background: tokens.$color-blue-05;
+    }
+
+    &.removed,
+    &.fixed {
+      background: tokens.$color-green-20;
+    }
+  }
+}

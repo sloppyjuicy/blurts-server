@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = 帳戶餘額
 address-book-contacts = 通訊錄聯絡人
@@ -14,7 +19,7 @@ avatars = 帳號大頭照
 bank-account-numbers = 銀行帳號
 beauty-ratings = 美貌等級評分
 biometric-data = 生物識別資料
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = 自傳
 browser-user-agent-details = 瀏覽器 User Agent 詳細資料
@@ -25,6 +30,8 @@ career-levels = 職業水平
 cellular-network-names = 行動網路名稱
 charitable-donations = 慈善捐款紀錄
 chat-logs = 聊天紀錄
+citizenship-statuses = 公民身份
+clothing-sizes = 衣服尺寸
 credit-card-cvv = 信用卡驗證碼
 credit-cards = 信用卡
 credit-status-information = 信用狀態資訊
@@ -34,6 +41,9 @@ customer-interactions = 顧客互動
 dates-of-birth = 生日
 deceased-date = 死亡日期
 deceased-statuses = 死亡狀態
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = 出貨資訊
 device-information = 裝置資訊
 device-serial-numbers = 裝置序號
 device-usage-tracking-data = 裝置使用追蹤資料
@@ -54,11 +64,13 @@ family-structure = 家庭結構
 financial-investments = 金融投資
 financial-transactions = 金融交易紀錄
 fitness-levels = 健身水平
+flights-taken = 搭乘過的航班
 genders = 性別
 geographic-locations = 地理位置
 government-issued-ids = 政府簽發的證件資料
 health-insurance-information = 健康保險資訊
 historical-passwords = 過去使用的密碼
+hiv-statuses = HIV / 愛滋病狀態
 home-loan-information = 房貸資訊
 home-ownership-statuses = 房屋擁有情況
 homepage-urls = 首頁網址
@@ -69,10 +81,13 @@ instant-messenger-identities = 即時通訊身分
 ip-addresses = IP 地址
 job-applications = 求職申請資料
 job-titles = 工作頭銜
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = 汽車牌照
 living-costs = 生活成本
+# This string refers to financial loans.
+loan-information = 貸款資訊
 login-histories = 登入紀錄
+loyalty-program-details = 會員方案詳細資訊
 mac-addresses = MAC 地址
 marital-statuses = 婚姻狀態
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = 姓名
 nationalities = 國籍
 net-worths = 淨值
 nicknames = 暱稱
+# no data classes found
+none-data-class = 無
 occupations = 職業
+# various data classes grouped together
+other-data-class = 其他
 parenting-plans = 育兒計劃
 partial-credit-card-data = 信用卡部分資料
 partial-dates-of-birth = 部分生日日期
+partial-phone-numbers = 部分手機號碼
 passport-numbers = 護照號碼
 password-hints = 密碼提示
 password-strengths = 密碼強度
@@ -128,6 +148,7 @@ spouses-names = 配偶姓名
 support-tickets = 技術支援請求
 survey-results = 問卷結果
 taxation-records = 稅務記錄
+telecommunications-carrier = 電信業者
 time-zones = 時區
 travel-habits = 旅遊習慣
 user-statuses = 使用者狀態
@@ -135,6 +156,7 @@ user-website-urls = 使用者網址
 usernames = 帳號名稱
 utility-bills = 水電費帳單
 vehicle-details = 車輛詳細資訊
+vehicle-identification-numbers-vins = 車身號碼（VIN）
 website-activity = 網站使用紀錄
 work-habits = 工作習慣
 years-of-birth = 出生年分

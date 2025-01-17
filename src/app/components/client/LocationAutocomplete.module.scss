@@ -1,0 +1,23 @@
+@use "../../tokens";
+
+.locationItem {
+  font: tokens.$text-body-sm;
+  // Add a bit more vertical space: The next spacing step is too much.
+  padding: tokens.$spacing-sm calc(tokens.$spacing-sm * 1.5);
+
+  strong {
+    // Space small bold letters a bit wider for legibility.
+    letter-spacing: 0.01em;
+  }
+
+  span {
+    color: tokens.$color-grey-40;
+    font: tokens.$text-body-xs;
+    margin-left: 0.5em;
+  }
+}
+
+.infoText {
+  font: tokens.$text-body-xs;
+  padding: tokens.$spacing-sm 0;
+}

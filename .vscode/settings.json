@@ -1,0 +1,30 @@
+{
+    "eslint.enable": true,
+    "eslint.format.enable": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "eslint.validate": [
+        "javascript"
+    ],
+    "gitlens.advanced.blame.customArguments": [
+        "--ignore-revs-file",
+        ".git-blame-ignore-revs"
+    ],
+    "[css][scss]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": "explicit"
+        }
+    },
+    "[javascript][typescript][typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "[javascript][typescript][typescriptreact][markdown][html][css][scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+  "[fluent]": {
+    "files.trimTrailingWhitespace": true
+  },
+}

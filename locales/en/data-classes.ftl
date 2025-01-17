@@ -1,4 +1,8 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Breach Data Classes
 
 account-balances = Account balances
 address-book-contacts = Address book contacts
@@ -14,7 +18,7 @@ avatars = Avatars
 bank-account-numbers = Bank account numbers
 beauty-ratings = Beauty ratings
 biometric-data = Biometric data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bios
 browser-user-agent-details = Browser user agent details
@@ -25,6 +29,8 @@ career-levels = Career levels
 cellular-network-names = Cellular network names
 charitable-donations = Charitable donations
 chat-logs = Chat logs
+citizenship-statuses = Citizenship statuses
+clothing-sizes = Clothing sizes
 credit-card-cvv = Credit card CVV
 credit-cards = Credit cards
 credit-status-information = Credit status information
@@ -34,6 +40,9 @@ customer-interactions = Customer interactions
 dates-of-birth = Dates of birth
 deceased-date = Deceased date
 deceased-statuses = Deceased statuses
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Delivery instructions
 device-information = Device information
 device-serial-numbers = Device serial numbers
 device-usage-tracking-data = Device usage tracking data
@@ -54,11 +63,13 @@ family-structure = Family structure
 financial-investments = Financial investments
 financial-transactions = Financial transactions
 fitness-levels = Fitness levels
+flights-taken = Flights taken
 genders = Genders
 geographic-locations = Geographic locations
 government-issued-ids = Government issued IDs
 health-insurance-information = Health insurance information
 historical-passwords = Historical passwords
+hiv-statuses = HIV statuses
 home-loan-information = Home loan information
 home-ownership-statuses = Home ownership statuses
 homepage-urls = Homepage URLs
@@ -69,10 +80,13 @@ instant-messenger-identities = Instant messenger identities
 ip-addresses = IP addresses
 job-applications = Job applications
 job-titles = Job titles
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = License Plates
 living-costs = Living costs
+# This string refers to financial loans.
+loan-information = Loan information
 login-histories = Login histories
+loyalty-program-details = Loyalty program details
 mac-addresses = MAC addresses
 marital-statuses = Marital statuses
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +96,15 @@ names = Names
 nationalities = Nationalities
 net-worths = Net worths
 nicknames = Nicknames
+# no data classes found
+none-data-class = None
 occupations = Occupations
+# various data classes grouped together
+other-data-class = Other
 parenting-plans = Parenting plans
 partial-credit-card-data = Partial credit card data
 partial-dates-of-birth = Partial dates of birth
+partial-phone-numbers = Partial phone numbers
 passport-numbers = Passport numbers
 password-hints = Password hints
 password-strengths = Password strengths
@@ -128,6 +147,7 @@ spouses-names = Spouses names
 support-tickets = Support tickets
 survey-results = Survey results
 taxation-records = Taxation records
+telecommunications-carrier = Telecommunications carriers
 time-zones = Time zones
 travel-habits = Travel habits
 user-statuses = User statuses
@@ -135,6 +155,7 @@ user-website-urls = User website URLs
 usernames = Usernames
 utility-bills = Utility bills
 vehicle-details = Vehicle details
+vehicle-identification-numbers-vins = Vehicle identification numbers (VINs)
 website-activity = Website activity
 work-habits = Work habits
 years-of-birth = Years of birth

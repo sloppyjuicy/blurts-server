@@ -1,9 +1,16 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = stanja na računih
 address-book-contacts = stiki iz imenika
 age-groups = starostne skupine
 ages = starosti
+# Refers to medical appointments.
+appointments = termini pregledov
 apps-installed-on-devices = aplikacije, nameščene v napravah
 astrological-signs = astrološka znamenja
 audio-recordings = zvočni posnetki
@@ -12,7 +19,7 @@ avatars = avatarji
 bank-account-numbers = številke bančnih računov
 beauty-ratings = lepotne ocene
 biometric-data = biometrični podatki
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = življenjepisi
 browser-user-agent-details = podrobnosti o uporabniškem agentu brskalnika
@@ -23,20 +30,25 @@ career-levels = karierne ravni
 cellular-network-names = imena mobilnih omrežij
 charitable-donations = dobrodelne donacije
 chat-logs = dnevniki klepeta
+citizenship-statuses = stanja državljanstva
+clothing-sizes = velikosti oblačil
 credit-card-cvv = kode CVV kreditnih kartic
 credit-cards = kreditne kartice
 credit-status-information = informacije o kreditnem stanju
-cryptocurrency-wallet-hashes = Prstni odtisi kriptodenarnice
+cryptocurrency-wallet-hashes = prstni odtisi kriptodenarnice
 customer-feedback = povratne informacije strank
 customer-interactions = interakcije s strankami
 dates-of-birth = datumi rojstva
 deceased-date = datumi smrti
 deceased-statuses = statusi umrlih
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = navodila za dostavo
 device-information = podatki o napravah
-device-serial-numbers = Serijske številke naprav
+device-serial-numbers = serijske številke naprav
 device-usage-tracking-data = podatki o sledenju uporabe naprav
 drinking-habits = pivske navade
-driver-s-licenses = Vozniška dovoljenja
+driver-s-licenses = vozniška dovoljenja
 drug-habits = zasvojenost z drogami
 eating-habits = prehranjevalne navade
 education-levels = stopnje izobrazbe
@@ -52,11 +64,13 @@ family-structure = sestava družine
 financial-investments = finančne naložbe
 financial-transactions = finančne transakcije
 fitness-levels = stopnje telesne pripravljenosti
+flights-taken = opravljeni leti
 genders = spoli
 geographic-locations = geografske lokacije
 government-issued-ids = osebni dokumenti
 health-insurance-information = podatki o zdravstvenem zavarovanju
 historical-passwords = predhodna gesla
+hiv-statuses = statusi HIV
 home-loan-information = podatki o domačih posojilih
 home-ownership-statuses = statusi lastništev nepremičnin
 homepage-urls = spletni naslovi domačih strani
@@ -67,29 +81,37 @@ instant-messenger-identities = Identitete neposrednega sporočanja
 ip-addresses = naslovi IP
 job-applications = prijave za delovno mesto
 job-titles = službeni nazivi
-# This string refers to vehicle license plates. 
-licence-plates = Registrske tablice
-living-costs = Življenjski stroški
-login-histories = Zgodovine prijav
+# This string refers to vehicle license plates.
+licence-plates = registrske tablice
+living-costs = življenjski stroški
+# This string refers to financial loans.
+loan-information = podatki o posojilih
+login-histories = zgodovine prijav
+loyalty-program-details = Podrobnosti programa zvestobe
 mac-addresses = naslovi MAC
 marital-statuses = zakonski statusi
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
-mnemonic-phrases = Memonične fraze
-mothers-maiden-names = Dekliška imena mater
+mnemonic-phrases = memonične fraze
+mothers-maiden-names = dekliška imena mater
 names = imena
 nationalities = državljanstva
 net-worths = neto prihodki
 nicknames = vzdevki
+# no data classes found
+none-data-class = brez
 occupations = poklici
+# various data classes grouped together
+other-data-class = drugo
 parenting-plans = načrti za starševstvo
 partial-credit-card-data = delni podatki o kreditnih karticah
 partial-dates-of-birth = delni rojstni datumi
+partial-phone-numbers = delne telefonske številke
 passport-numbers = številke potnih listov
 password-hints = namigi za gesla
-password-strengths = Moči gesel
+password-strengths = moči gesel
 passwords = gesla
 payment-histories = zgodovina plačil
-payment-methods = načini plačil
+payment-methods = plačilna sredstva
 personal-descriptions = opisi oseb
 personal-health-data = osebni zdravstveni podatki
 personal-interests = osebni interesi
@@ -122,10 +144,11 @@ social-connections = družbene povezave
 social-media-profiles = profili družabnih medijev
 social-security-numbers = številke socialnih zavarovanj
 spoken-languages = govorjeni jeziki
-spouses-names = Imena zakoncev
+spouses-names = imena zakoncev
 support-tickets = vstopnice za podporo
 survey-results = rezultati raziskav
 taxation-records = davčni podatki
+telecommunications-carrier = telekomunikacijski operaterji
 time-zones = časovni pasovi
 travel-habits = potovalne navade
 user-statuses = uporabniški statusi
@@ -133,6 +156,7 @@ user-website-urls = URL-ji uporabniških spletnih strani
 usernames = uporabniška imena
 utility-bills = uporabniški računi
 vehicle-details = podrobnosti o vozilih
+vehicle-identification-numbers-vins = identifikacijske številke vozil (VIN)
 website-activity = dejavnost spletnih strani
 work-habits = delovne navade
 years-of-birth = leta rojstva

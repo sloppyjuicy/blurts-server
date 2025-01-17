@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Banksaldo’s
 address-book-contacts = Adresboekkontakten
@@ -14,7 +19,7 @@ avatars = Avatars
 bank-account-numbers = Bankrekkeningnûmers
 beauty-ratings = Skjintmewurdearringen
 biometric-data = Biometryske gegevens
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bio's
 browser-user-agent-details = Details oer de brûkte browser
@@ -25,6 +30,8 @@ career-levels = Karriêrenivo's
 cellular-network-names = Mobyl-netwurknammen
 charitable-donations = Goeddiedigensdoelen
 chat-logs = Chatlochboeken
+citizenship-statuses = Staatsburgerskipsstatussen
+clothing-sizes = Kleanmjitten
 credit-card-cvv = Creditcard-CVV
 credit-cards = Creditcards
 credit-status-information = Ynformaasje oer kreditsteat
@@ -34,6 +41,9 @@ customer-interactions = Ynteraksje mei klanten
 dates-of-birth = Bertedatum
 deceased-date = Datum fan ferstjerren
 deceased-statuses = Steat fan ferstjerren
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Ofleverynstruksjes
 device-information = Apparaatgegevens
 device-serial-numbers = Searjenûmers fan apparaten
 device-usage-tracking-data = Folchgegevens oer apparaatgebrûk
@@ -54,11 +64,13 @@ family-structure = Famyljestruktuer
 financial-investments = Finansjele ynfestearingen
 financial-transactions = Finansjele transaksjes
 fitness-levels = Fitheidsnivo's
+flights-taken = Nommen fluchten
 genders = Geslachten
 geographic-locations = Geografyske lokaasjes
 government-issued-ids = Troch de oerheid útjûne ID’s
 health-insurance-information = Ynformaasje oer soarchfersekering
 historical-passwords = Alde wachtwurden
+hiv-statuses = HIV-statussen
 home-loan-information = Hypoteekynformaasje
 home-ownership-statuses = Steaten oer hûseigendom
 homepage-urls = Startsiden-URL’s
@@ -69,10 +81,13 @@ instant-messenger-identities = Chat-identiteiten
 ip-addresses = IP-adressen
 job-applications = Sollisitaasjes
 job-titles = Funksjetitels
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Kentekens
 living-costs = Kosten libbensûnderhâld
+# This string refers to financial loans.
+loan-information = Lieningsgegevens
 login-histories = Oanmeldskiednissen
+loyalty-program-details = Details klanteprogramma
 mac-addresses = MAC-adressen
 marital-statuses = Troude steaten
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Nammen
 nationalities = Nasjonaliteiten
 net-worths = Fermogenswearden
 nicknames = Bynammen
+# no data classes found
+none-data-class = Gjin
 occupations = Beroppen
+# various data classes grouped together
+other-data-class = Oars
 parenting-plans = Alderskipsplannen
 partial-credit-card-data = Part fan creditcardgegevens
 partial-dates-of-birth = Parten fan bertedata
+partial-phone-numbers = In part fan telefoannûmers
 passport-numbers = Paspoartnûmers
 password-hints = Wachtwurdhints
 password-strengths = Wachtwurdsterktes
@@ -128,6 +148,7 @@ spouses-names = Nammen oarehelten
 support-tickets = Stipeoanfragen
 survey-results = Resultaten fan fragelisten
 taxation-records = Belestinggegevens
+telecommunications-carrier = Telecomproviders
 time-zones = Tiidsônen
 travel-habits = Reisgewoanten
 user-statuses = Brûkerssteaten
@@ -135,6 +156,7 @@ user-website-urls = URL’s fan brûkerswebsites
 usernames = Brûkersnammen
 utility-bills = Nutsrekkeningen
 vehicle-details = Details fan ferfiermiddel
+vehicle-identification-numbers-vins = Reau-identifikaasjenûmers (RIN’s)
 website-activity = Website-aktiviteit
 work-habits = Wurkgewoanten
 years-of-birth = Bertejierren

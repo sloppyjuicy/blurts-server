@@ -1,0 +1,104 @@
+@use "../../../tokens";
+
+.dialog {
+  background-color: tokens.$color-white;
+  border-radius: tokens.$border-radius-md;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - (2 * tokens.$spacing-md));
+  max-width: tokens.$content-lg;
+  outline: none;
+  overflow-y: auto;
+  position: relative;
+  width: calc(100% - (2 * tokens.$spacing-md));
+
+  .header,
+  .content {
+    align-items: center;
+  }
+
+  .header {
+    @include tokens.no-focus-outline;
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-md;
+    padding: tokens.$layout-sm tokens.$layout-sm tokens.$spacing-sm;
+
+    @media screen and (min-width: tokens.$screen-lg) {
+      padding: tokens.$layout-md tokens.$layout-xl tokens.$spacing-sm;
+    }
+  }
+
+  .content {
+    padding: tokens.$spacing-sm tokens.$layout-sm tokens.$layout-sm;
+
+    @media screen and (min-width: tokens.$screen-lg) {
+      padding: tokens.$spacing-sm tokens.$layout-xl tokens.$layout-md;
+    }
+  }
+
+  .title {
+    color: tokens.$color-grey-50;
+    font: tokens.$text-title-2xs;
+    text-align: center;
+  }
+
+  &.horizontal {
+    @media screen and (min-width: tokens.$screen-lg) {
+      flex-direction: row;
+    }
+
+    .header {
+      background-color: tokens.$color-grey-05;
+      flex-direction: column-reverse;
+      gap: tokens.$spacing-xl;
+      justify-content: center;
+      text-align: left;
+
+      @media screen and (min-width: tokens.$screen-lg) {
+        padding: tokens.$layout-md tokens.$layout-sm tokens.$layout-md
+          tokens.$layout-xl;
+      }
+    }
+
+    .content {
+      @media screen and (min-width: tokens.$screen-lg) {
+        padding: tokens.$layout-md tokens.$layout-xl tokens.$layout-md
+          tokens.$layout-sm;
+      }
+    }
+
+    .title {
+      text-align: left;
+    }
+  }
+
+  .dismissButton {
+    background: none;
+    border: none;
+    color: tokens.$color-grey-40;
+    cursor: pointer;
+    padding: tokens.$spacing-md;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      color: tokens.$color-grey-30;
+    }
+  }
+
+  .illustrationWrapper {
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  ul,
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-sm;
+  }
+}

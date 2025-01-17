@@ -1,0 +1,167 @@
+@use "../../tokens";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: none;
+
+  @media screen and (max-width: tokens.$screen-xl) {
+    position: sticky;
+    background-color: tokens.$color-white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: tokens.$spacing-sm;
+    padding: tokens.$spacing-xs tokens.$spacing-sm;
+    // Overlay `.nonHeader` so that the box-shadow of this element
+    // is not covered.
+    z-index: 1;
+
+    .headerStart {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: tokens.$spacing-md;
+    }
+
+    .headerEnd {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      gap: tokens.$spacing-sm;
+      justify-content: flex-end;
+    }
+
+    .menuToggleButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border-style: none;
+      padding: tokens.$spacing-md;
+      cursor: pointer;
+
+      svg {
+        width: auto;
+        height: 16px;
+      }
+
+      &:hover svg {
+        color: tokens.$color-purple-70;
+      }
+    }
+  }
+}
+
+.nonHeader {
+  // `overflow: auto` ensures that the stickily positioned .mainMenu sticks to
+  // this element, rather than the viewport. See
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/position#syntax
+  overflow: auto;
+  height: 100%;
+  // I’m not entirely sure if this is the case, but my suspicion is
+  // the following: Adding `position: relative` makes this the most top-level
+  // relative positionend element in the DOM branch it’s in. This instructs it to
+  // orient its `height: 100%` with regards to the window and not itself.
+  // Otherwise, WebKit based browsers seem to take the entire inner size of
+  // `.nonHeader` into account when calculating the height of `body` and that
+  // causes an additonal scroll on the `body` element.
+  // An alternative option would be to set `height: 100vw`. Since `vw` units
+  // can have unexpected behaviour on mobile devices this should do for now.
+  position: relative;
+
+  .mainMenuLayer {
+    display: none;
+  }
+
+  @media screen and (max-width: tokens.$screen-xl) {
+    .hasOpenMenu & .mainMenuLayer {
+      display: block;
+      position: sticky;
+      top: 0;
+      height: 0;
+      // Overlap .content
+      z-index: 2;
+
+      .mainMenu {
+        align-items: center;
+        display: flex;
+        background-color: tokens.$color-white;
+        box-shadow: tokens.$box-shadow-sm;
+        flex-direction: column;
+
+        ul {
+          border-bottom: 1px solid tokens.$color-grey-10;
+          list-style-type: none;
+          padding: 0;
+          width: 100%;
+
+          a {
+            align-items: center;
+            display: flex;
+            padding: calc(tokens.$spacing-sm * 1.5) tokens.$spacing-lg;
+            gap: tokens.$spacing-sm;
+            color: tokens.$color-black;
+            border-top: 1px solid tokens.$color-grey-10;
+            text-decoration: none;
+
+            &.isActive {
+              color: tokens.$color-purple-70;
+              text-decoration: underline;
+            }
+
+            &:hover {
+              background-color: tokens.$color-purple-50;
+              color: tokens.$color-white;
+              text-decoration: underline;
+            }
+
+            // The `a` and `a:visited` violate this rule, but are safe:
+            // stylelint-disable-next-line no-descending-specificity
+            &:focus {
+              background-color: tokens.$color-grey-10;
+              outline: none;
+              text-decoration: underline;
+            }
+
+            & > svg {
+              fill: tokens.$color-purple-70;
+            }
+          }
+
+          &.subMenu {
+            border-bottom: none;
+
+            a {
+              font-weight: 400;
+              padding: calc(tokens.$spacing-sm * 1.5) tokens.$spacing-2xl;
+              border-top: none;
+            }
+          }
+        }
+      }
+
+      .premiumCta {
+        margin: tokens.$spacing-md;
+        min-width: tokens.$screen-xs;
+
+        & > button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .content {
+    height: 100%;
+    flex: 1 0 auto;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+}

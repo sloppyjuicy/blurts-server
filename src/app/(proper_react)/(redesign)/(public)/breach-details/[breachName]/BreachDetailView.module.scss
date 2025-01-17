@@ -1,0 +1,199 @@
+@use "../../../../../tokens";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  header {
+    padding: tokens.$layout-xl tokens.$spacing-xl;
+    max-width: tokens.$content-lg;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-md;
+
+    h1 {
+      font: tokens.$text-title-sm;
+      display: flex;
+      align-items: center;
+      gap: tokens.$spacing-sm;
+    }
+
+    a {
+      color: tokens.$color-blue-50;
+      font-weight: 700;
+    }
+  }
+
+  .overview {
+    width: 100%;
+    background-color: rgba(tokens.$color-purple-05, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: tokens.$spacing-lg;
+    padding: tokens.$spacing-2xl;
+
+    h2.overviewTitle,
+    .content {
+      width: tokens.$content-md;
+      max-width: 100%;
+    }
+
+    h2.overviewTitle {
+      font: tokens.$text-title-sm;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$spacing-lg;
+
+      a[href="#delayed-reporting"] {
+        color: tokens.$color-black;
+      }
+
+      h3 {
+        font: tokens.$text-title-2xs;
+      }
+
+      .compromisedDataList ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: tokens.$spacing-md;
+        margin: 0;
+        padding: tokens.$spacing-md;
+
+        li {
+          display: flex;
+          gap: tokens.$spacing-md;
+        }
+      }
+
+      small {
+        color: tokens.$color-grey-50;
+        font: tokens.$text-body-sm;
+
+        a {
+          font-weight: 700;
+          color: tokens.$color-grey-50;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .signUp {
+    background-color: rgba(tokens.$color-purple-05, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: tokens.$spacing-lg;
+    padding: tokens.$spacing-2xl;
+
+    .content {
+      max-width: tokens.$content-sm;
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$spacing-md;
+
+      h2.signUpTitle {
+        font: tokens.$text-title-3xs;
+      }
+    }
+  }
+}
+
+.recommendations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: tokens.$spacing-2xl;
+  padding: tokens.$spacing-2xl;
+
+  h2.recommendationTitle,
+  .lead,
+  dl {
+    width: tokens.$content-md;
+    max-width: 100%;
+  }
+
+  h2.recommendationTitle {
+    font: tokens.$text-title-xs;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-2xl;
+
+    div {
+      $iconWidth: 48px;
+
+      padding-inline-start: calc($iconWidth + tokens.$spacing-xl);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$spacing-md;
+
+      img {
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        // top: 50%;
+        // transform: translateY(-50%);
+        width: $iconWidth;
+      }
+
+      dt {
+        font: tokens.$text-title-3xs;
+      }
+
+      dd {
+        display: flex;
+        flex-direction: column;
+        gap: tokens.$spacing-md;
+        color: tokens.$color-grey-50;
+
+        .cta {
+          font-weight: 700;
+          color: tokens.$color-blue-50;
+
+          &:hover {
+            color: tokens.$color-blue-80;
+          }
+        }
+      }
+    }
+  }
+}
+
+.explainers {
+  background-color: rgba(tokens.$color-purple-05, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: tokens.$spacing-2xl;
+  padding: tokens.$spacing-2xl;
+
+  .explainer {
+    width: tokens.$content-md;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-sm;
+  }
+
+  h2.explainerTitle {
+    font: tokens.$text-title-xs;
+  }
+}

@@ -1,0 +1,186 @@
+@use "../../tokens";
+
+.filterHeaderWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: tokens.$layout-xs;
+  padding: tokens.$spacing-sm tokens.$spacing-md;
+  border-bottom: 1px solid tokens.$color-grey-20;
+
+  .rightSpace {
+    // Spacing to accomodate the gap where the chevron of the same dimension falls within the alignment
+    width: 20px;
+    height: 20px;
+  }
+
+  button {
+    @include tokens.question-mark-circle-btn;
+  }
+
+  ul.filterHeaderList {
+    font: tokens.$text-body-sm;
+    font-weight: 600;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    gap: tokens.$layout-sm;
+    width: 100%;
+    justify-content: space-between;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: tokens.$spacing-xs;
+
+      button svg {
+        min-width: 15px;
+      }
+
+      &.hideOnMobile {
+        display: none;
+      }
+
+      @media screen and (min-width: tokens.$screen-lg) {
+        flex: 1 1 0%;
+
+        &.exposureImageWrapper {
+          flex: 0.2 0 tokens.$width-first-column-filter-bar;
+        }
+      }
+
+      @media screen and (min-width: tokens.$screen-xl) {
+        &.hideOnMobile {
+          display: flex;
+        }
+      }
+
+      &:last-of-type {
+        min-width: 145px; // match the StatusPill width
+      }
+    }
+
+    .filterBtn {
+      display: flex;
+      flex-direction: row;
+      gap: tokens.$spacing-xs;
+      align-items: center;
+    }
+  }
+}
+
+.filterDialog {
+  background: tokens.$color-white;
+  border-radius: tokens.$border-radius-sm;
+  box-shadow: tokens.$box-shadow-md;
+  width: tokens.$content-xs;
+  overflow-y: scroll;
+
+  @media screen and (min-width: tokens.$screen-sm) {
+    width: auto;
+    overflow-y: hidden;
+  }
+
+  .exposuresFilterWrapper {
+    padding: tokens.$spacing-md;
+
+    @media screen and (min-width: tokens.$screen-sm) {
+      padding: tokens.$spacing-xl;
+    }
+
+    .dismissButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: tokens.$spacing-md;
+      color: tokens.$color-grey-40;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        color: tokens.$color-grey-30;
+      }
+    }
+
+    .filterControls {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      gap: tokens.$spacing-sm;
+      padding-top: tokens.$spacing-md;
+      width: 100%;
+    }
+
+    .exposuresFilterRadioButtons {
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$spacing-md;
+
+      @media screen and (min-width: tokens.$screen-sm) {
+        flex-direction: row;
+        gap: tokens.$spacing-2xl;
+      }
+
+      .exposuresFilterCategory {
+        .radioButtonsWrapper {
+          padding-top: tokens.$spacing-sm;
+          display: flex;
+          flex-direction: column;
+          gap: tokens.$spacing-xs;
+
+          .radioItem {
+            font: tokens.$text-body-sm;
+            font-weight: 500;
+            display: flex;
+            gap: tokens.$spacing-xs;
+          }
+        }
+
+        .exposuresFilterLabel {
+          font-weight: 600;
+          border-bottom: 1px solid tokens.$color-black;
+          padding-bottom: tokens.$spacing-xs;
+          display: flex;
+          flex-direction: row;
+          gap: tokens.$spacing-xs;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.modalBodyContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-md;
+
+  .statusList {
+    padding: tokens.$spacing-md 0;
+
+    .statusListItem {
+      align-items: flex-start;
+      gap: tokens.$spacing-sm;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: tokens.$screen-sm) {
+        align-items: center;
+        gap: tokens.$spacing-md;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.visuallyHidden {
+  @include tokens.visually-hidden;
+}
+
+.companyNameArea {
+  @include tokens.company-name-area;
+}

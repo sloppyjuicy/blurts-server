@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Banksaldo’s
 address-book-contacts = Adresboekcontacten
@@ -14,7 +19,7 @@ avatars = Avatars
 bank-account-numbers = Bankrekeningnummers
 beauty-ratings = Schoonheidswaarderingen
 biometric-data = Biometrische gegevens
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bio’s
 browser-user-agent-details = Details over de gebruikte browser
@@ -25,6 +30,8 @@ career-levels = Carrièreniveaus
 cellular-network-names = Mobiel-netwerknamen
 charitable-donations = Liefdadigheidsdoelen
 chat-logs = Chatlogboeken
+citizenship-statuses = Staatsburgerschapsstatussen
+clothing-sizes = Kledingmaten
 credit-card-cvv = Creditcard-CVV
 credit-cards = Creditcards
 credit-status-information = Informatie over kredietstatus
@@ -34,6 +41,9 @@ customer-interactions = Interactie met klanten
 dates-of-birth = Geboortedata
 deceased-date = Overlijdensdatum
 deceased-statuses = Overlijdensstatussen
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Afleverinstructies
 device-information = Apparaatgegevens
 device-serial-numbers = Serienummers van apparaten
 device-usage-tracking-data = Volggegevens over apparaatgebruik
@@ -54,11 +64,13 @@ family-structure = Gezinssamenstelling
 financial-investments = Financiële investeringen
 financial-transactions = Financiële transacties
 fitness-levels = Fitheidsniveaus
+flights-taken = Genomen vluchten
 genders = Geslachten
 geographic-locations = Geografische locaties
 government-issued-ids = Door de overheid uitgegeven ID’s
 health-insurance-information = Informatie over zorgverzekering
 historical-passwords = Oude wachtwoorden
+hiv-statuses = HIV-statussen
 home-loan-information = Hypotheekinformatie
 home-ownership-statuses = Statussen over huiseigendom
 homepage-urls = Startpagina-URL’s
@@ -69,10 +81,13 @@ instant-messenger-identities = Chat-identiteiten
 ip-addresses = IP-adressen
 job-applications = Vacatures
 job-titles = Functietitels
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Kentekens
 living-costs = Kosten levensonderhoud
+# This string refers to financial loans.
+loan-information = Leningsgegevens
 login-histories = Aanmeldgeschiedenissen
+loyalty-program-details = Details klantenprogramma
 mac-addresses = MAC-adressen
 marital-statuses = Huwelijkse staten
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Namen
 nationalities = Nationaliteiten
 net-worths = Vermogenswaarden
 nicknames = Bijnamen
+# no data classes found
+none-data-class = Geen
 occupations = Beroepen
+# various data classes grouped together
+other-data-class = Overig
 parenting-plans = Ouderschapsplannen
 partial-credit-card-data = Gedeeltelijke creditcardgegevens
 partial-dates-of-birth = Gedeeltelijke geboortedata
+partial-phone-numbers = Gedeeltelijke telefoonnummers
 passport-numbers = Paspoortnummers
 password-hints = Wachtwoordhints
 password-strengths = Wachtwoordsterktes
@@ -128,6 +148,7 @@ spouses-names = Namen echtgenoten
 support-tickets = Ondersteuningsaanvragen
 survey-results = Resultaten van vragenlijsten
 taxation-records = Belastinggegevens
+telecommunications-carrier = Telecomproviders
 time-zones = Tijdzones
 travel-habits = Reisgewoonten
 user-statuses = Gebruikersstatussen
@@ -135,6 +156,7 @@ user-website-urls = URL’s van gebruikerswebsites
 usernames = Gebruikersnamen
 utility-bills = Nutsrekeningen
 vehicle-details = Details van vervoermiddel
+vehicle-identification-numbers-vins = Voertuigidentificatienummers (VIN’s)
 website-activity = Website-activiteit
 work-habits = Werkgewoonten
 years-of-birth = Geboortejaren

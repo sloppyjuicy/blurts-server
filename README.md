@@ -1,60 +1,51 @@
 # Firefox Monitor Server
 
+[![Monitor Cron e2e Tests](https://github.com/mozilla/blurts-server/actions/workflows/e2e_cron.yml/badge.svg)](https://github.com/mozilla/blurts-server/actions/workflows/e2e_cron.yml)
+
 ## Summary
 
 Firefox Monitor notifies users when their credentials have been compromised in a data breach.
 
-This code is for the monitor.firefox.com service & website.
+This code is for the monitor.mozilla.org service & website.
 
 Breach data is powered by [haveibeenpwned.com](https://haveibeenpwned.com/).
 
 See the [Have I Been Pwned about page](https://haveibeenpwned.com/About) for
 the "what" and "why" of data breach alerts.
 
+## Architecture
+
+![Image of Monitor architecture](docs/monitor-architecture.png "Firefox Monitor")
+
 ## Development
 
-Please refer to our [coding standards](docs/coding-standards.md) information for code styles, naming conventions and other methodologies.  
 ### Requirements
 
-* [Node](https://nodejs.org/) 10 (with npm)
-* [Postgres](https://www.postgresql.org/)
+- [Volta](https://volta.sh/) (installs the correct version of Node and npm)
+- [Postgres](https://www.postgresql.org/) | Note: On a Mac, we recommend downloading the [Postgres.app](https://postgresapp.com/) instead.
+- [Python](https://www.python.org/downloads/) | [With Homebrew](https://docs.brew.sh/Homebrew-and-Python)
+- [k6](https://grafana.com/docs/k6/latest/set-up/install-k6/) | k6 load testing tool
 
-### Install
+### Code style
 
-1. Clone and change to the directory:
+Linting and formatting is enforced via [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/) for JS and CSS. Both are installed as dev-dependencies and can be run with `npm run lint`. A push to origin will also trigger linting.
 
-    ```sh
-    git clone https://github.com/mozilla/blurts-server.git
-    cd blurts-server
-    ```
+ESLint rules are based on [eslint-config-standard](https://github.com/standard/eslint-config-standard). To fix all auto-fixable problems, run `npx eslint . --fix`
 
-2. Install dependencies:
+Stylelint rules are based on [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard). To fix all auto-fixable problems, run `npx stylelint public/css/ --fix`
 
-    ```sh
-    npm install
-    ```
+### GIT
 
-3. Copy the `.env-dist` file to `.env`:
+We track commits that are largely style/formatting via `.git-blame-ignore-revs`. This allows Git Blame to ignore the format commit author and show the original code author. In order to enable this in GitLens, add the following to VS Code `settings.json`:
 
-    ```sh
-    cp .env-dist .env
-    ```
+```
+"gitlens.advanced.blame.customArguments": [
+   "--ignore-revs-file",
+   ".git-blame-ignore-revs"
+],
+```
 
-### Run
-
-1. Run the server:
-
-    ```sh
-    npm start
-    ```
-
-Note: `npm start` uses `onchange` and `nodemon` to automatically detect file
-changes, re-compile static assets, and restart the express process. If you want
-more control, see the `scripts` section of `package.json` for more commands.
-
-2. Navigate to [localhost:6060/](http://localhost:6060/)
-
-#### Database
+### Database
 
 To create the database tables ...
 
@@ -65,11 +56,11 @@ To create the database tables ...
    createdb test-blurts # for tests
    ```
 
-2. Update the `DATABASE_URL` value in your `.env` file with your local db
-   credentials:
+2. Update the `DATABASE_URL` value in your `.env.local` (see step 3 under
+   "Install") file with your local db credentials:
 
    ```
-   DATABASE_URL="postgres://<username>@localhost:<port>/blurts"
+   DATABASE_URL="postgres://<username>:<password>@localhost:<port>/blurts"
    ```
 
 3. Run the migrations:
@@ -78,98 +69,134 @@ To create the database tables ...
    npm run db:migrate
    ```
 
-#### Trigger Breach Alert Email
-Breach alert emails are triggered via HIBP. For dev purposes, we can trigger them ourselves to send to a [Mailinator](https://www.mailinator.com) email address.
+### Install
 
-To set up your environment for email testing with Mailinator:
-1. In your .env file, confirm or add values for `SMTP_URL`, `EMAIL_FROM`, `HIBP_KANON_API_TOKEN`, and `HIBP_API_TOKEN` (Ask for values in #fx-monitor-engineering)
+1. Clone and change to the directory:
 
-2. If you don't have a local FxA account, sign up on localhost.  You'll need to ensure `FXA_ENABLED=true` and confirm/add the value for `OAUTH_CLIENT_SECRET` in your .env file. (Ask in #fx-monitor-engineering)
-
-3. Start/restart your server
-
-4. Login to your Monitor account at http://localhost:6060/, and scroll to the bottom of [your dashboard](http://localhost:6060/user/dashboard) to add localmonitor20200827@mailinator.com to your list of monitored email addresses
-
-5. In your [Monitor settings](http://localhost:6060/user/dashboard), make sure notification preferences specify "Send breach alerts to the affected email address" (should be default).  This will send the alert to the Mailinator account.
-
-   You *could* set it to forward to your main email address/account (e.g. Gmail), but localhost images will be broken.  The Mailinator account displays existing images automagically.
-
-6. To trigger a breach alert email, you need to make a `POST /hibp/notify` request:
-   * `Authorization: Bearer` header token value that matches `HIBP_NOTIFY_TOKEN`
-   * `Content-Type: application/json` header
-   * JSON body with `breachName`, `hashPrefix`, and `hashSuffix` values
-      * `breachName` - string of a breach name in Monitor
-      * `hashPrefix` - string of first 6 chars of a subscriber's `primary_sha1`
-      * `hashSuffix` - array of strings of the remaining chars of the sha1 hash
-
-   e.g., a localhost `curl` command that triggers a breach alert email for the Adobe breach to the `localmonitor20200827@mailinator.com` subscriber:
-
-   ```
-   curl -v -H "Authorization: Bearer unsafe-default-token-for-dev" -H "Content-Type: application/json" -d '{"breachName": "Adobe", "hashPrefix": "365050", "hashSuffixes": ["53cbb89874fc738c0512daf12bc4d91765"]}' http://localhost:6060/hibp/notify
+   ```sh
+   git clone https://github.com/mozilla/blurts-server.git
+   cd blurts-server
    ```
 
-7. Visit https://www.mailinator.com/v4/public/inboxes.jsp?to=localmonitor20200827# to view the email
+2. Install dependencies:
 
+   ```sh
+   npm install
+   ```
 
+3. Copy the `.env.local.example` file to `.env.local`:
 
-#### Firefox Accounts
+   ```sh
+   cp .env.local.example .env.local
+   ```
 
-Subscribe with a Firefox Account is controlled via the `FXA_ENABLED`
-environment variable. (See `.env-dist`)
+4. Install fluent linter (requires Python)
+
+   ```sh
+   pip install -r .github/requirements.txt
+
+   OR
+
+   pip3 install -r .github/requirements.txt
+   ```
+
+5. Generate required Glean files (needs re-ran anytime Glean `.yaml` files are updated):
+
+   ```sh
+   npm run build-glean
+   ```
+
+6. Generate required Nimbus files (needs re-ran anytime Nimbus' `config/nimbus.yaml` file is updated):
+
+   ```sh
+   npm run build-nimbus
+   ```
+
+7. Create location data: Running the script manually is only needed for local development. The location data is being used in the onboarding exposures scan for autocompleting the “City and state” input.
+
+   ```sh
+   npm run create-location-data
+   ```
+
+8. Ensure that you have the right `env` variables/keys set in your `.env.local` file. You can retrieve the variables from the Firefox Monitor 1Password Vault, or through [Magic-Wormhole](https://magic-wormhole.readthedocs.io/en/latest/), by asking one of the our engineers.
+
+### Run
+
+1. To run the server similar to production using a build phase, which includes minified and bundled assets:
+
+   ```sh
+   npm start
+   ```
+
+   **_OR_**
+
+   Run in "dev mode" with:
+
+   ```sh
+   npm run dev
+   ```
+
+2. You may receive the error `Required environment variable was not set`. If this is the case, get the required env var(s) from another team member or ask in #fx-monitor-engineering. Otherwise, if the server started successfully, navigate to [localhost:6060](http://localhost:6060/)
+
+### PubSub
+
+Monitor uses GCP PubSub for processing incoming breach data, this can be tested locally using an emulator: https://cloud.google.com/pubsub/docs/emulator
+
+#### Run the GCP PubSub emulator:
+
+```sh
+gcloud beta emulators pubsub start --project=your-project-name
+```
+
+(Set `your-project-name` as the value for `GCP_PUBSUB_PROJECT_ID` in your `.env.local`.)
+
+### In a different shell, set the environment to point at the emulator and run Monitor in dev mode:
+
+```sh
+$(gcloud beta emulators pubsub env-init)
+npm run dev
+```
+
+### Incoming WebHook requests from HIBP will be of the form:
+
+```sh
+curl -d '{ "breachName": "000webhost", "hashPrefix": "test", "hashSuffixes": ["test"] }' \
+  -H "Authorization: Bearer unsafe-default-token-for-dev" \
+  http://localhost:6060/api/v1/hibp/notify
+```
+
+This emulates HIBP notifying our API that a new breach was found. Our API will
+then add it to the (emulated) pubsub queue.
+
+### This pubsub queue will be consumed by this cron job, which is responsible for looking up and emailing impacted users:
+
+```sh
+NODE_ENV="development" npm run dev:cron:breach-alerts
+```
+
+### Emails
+
+Monitor generates multiple emails that get sent to subscribers. To preview or test-send these emails see documentation [here](docs/monitor-emails.md).
+
+### Mozilla accounts ("FxA", formerly known as Firefox accounts)
 
 The repo comes with a development FxA oauth app pre-configured in `.env`, which
 should work fine running the app on http://localhost:6060. You'll need to get
-the `OAUTH_CLIENT_SECRET` value from someone in #fxmonitor-engineering.
+the `OAUTH_CLIENT_SECRET` value from a team member or someone in #fxmonitor-engineering.
 
 ## Testing
 
-The full test suite can be run via `npm test`.  
+The unit test suite can be run via `npm test`.
 
-At the end of a test suite run, coverage info will be sent to [Coveralls](https://coveralls.io/) to assess coverage changes and provide a neat badge.  For this step to complete locally, you need a root `.coveralls.yml` which contains a token – get this from another member of the Monitor team.  Alternatively, without the token you can simply ignore the `coveralls` error.  
+At the beginning of a test suite run, the `test-blurts` database will be populated with test tables and seed data found in `src/db/seeds/`
 
-*TODO:* Disable Coveralls step for local testing?
+At the end of a test suite, coverage info will be sent to [Coveralls](https://coveralls.io/) to assess coverage changes and provide a neat badge. To upload coverage locally, you need a root `.coveralls.yml` which contains a token – get this from another member of the Monitor team.
 
-### Individual tests
+End-to-End tests use Playwright and can be run via `npm run e2e`. [E2E-How-To](https://github.com/mozilla/blurts-server/src/e2e) for more info.
 
-To run individual tests, use `NODE_ENV=tests` and `jest`:
+#### Test Firefox Integration
 
-```
-NODE_ENV=tests jest --runInBand tests/home.test.js
-```
-
-To run tests with interactive `debugger` lines enabled:
-
-```
-NODE_ENV=tests node inspect --harmony ./node_modules/.bin/jest tests/home.test.js
-```
-
-### Integration tests
-
-Integration tests utilize the `@wdio` suite in conjunction with selenium.  Tests include image comparisons that utilize the baseline images found in *tests/integration/tests/Visual_Baseline/desktop_firefox*.  In order to get the tests to run locally, you will need to have the Selenium standalone server installed and running on your machine:
-```
-brew install selenium-server-standalone
-```
-
-This should auto-install the Java dependency (openjdk), however, it may not be linked correctly.  You can test linkage by running `java -version`.  If your terminal is unable to locate the Java runtime, you can try linking it:
-```
-sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-```
-
-Additionally, you'll need the Gecko driver:
-```
-brew install geckodriver
-```
-
-Before running the integration test, you may need to start the selenium server:
-```
-brew services start selenium-server-standalone
-```
-
-The image comparison tests are very brittle and may not work as expected when running strictly local, given individual machine setups.  In particular, if you have a high-dpi monitor on your machine, the browser may not be able to resize correctly.  (Baseline images are currently set to 1920x1080, which may not fit on your screen.) You may have better luck running the headless test versions: "test:integration-headless", "test:integration-headless-ci", and "test:integration-docker".
-
-Generating a new baseline image should ideally be done via the docker test to maintain consistency.  To do this, first delete the existing image and then run the docker integration test.  The test should prompt you that the baseline image cannot be found, and indicate the location for an auto-generated image to copy over.  Alternatively, you could also uncomment `autoSaveBaseline: true` in `tests/integration/wdio.docker.js` to have the image automatically copy/paste into `tests/integration/tests/Visual_Baseline/desktop_firefox`.
-
-### Test Firefox Integration
+_**TODO:** the following functionality is disabled but the instructions are left here for posterity._
 
 Firefox's internal about:protections page ("Protections Dashboard") fetches and
 displays breach stats for Firefox users who are signed into their FXA.
@@ -185,42 +212,41 @@ To test this part of Monitor:
 4. Go to `about:protections`
 5. Everything should be using your localhost instance of Monitor.
 
-### Lint
+#### Load testing
 
-After installing the dependencies, you can lint the code by calling:
+k6 is used for load testing.
+
+To test the HIBP breach alerts endpoint, use:
 
 ```sh
-npm run lint
+export SERVER_URL=...
+export HIBP_NOTIFY_TOKEN=...
+npm run loadtest:hbibp-webhook
 ```
+
+You can customise the number of requests to send in parallel ("virtual users") by setting the
+[`K6_VUS`](https://grafana.com/docs/k6/latest/using-k6/k6-options/reference/#vus) environment
+variable (default 1000), and for how long to send those requests by setting the
+[`K6_DURATION`](https://grafana.com/docs/k6/latest/using-k6/k6-options/reference/#duration)
+environment variable (default 30s).
+
+You can also enforce the alert being sent for a specific email address via the
+`LOADTEST_BREACHED_EMAIL` environment variable.
+
+See https://grafana.com/docs/k6/latest/get-started/running-k6/ for more information.
 
 ## Localization
 
-This repo includes a dedicated branch for localization called... `localization`.  To add localized text, add or update the relevant `.ftl` file under `locales/en`.  Be sure to reference the [localization documentation](https://mozilla-l10n.github.io/documentation/localization/dev_best_practices.html) for best practices.  
+All text that is visible to the user is defined in [Fluent](https://projectfluent.org/) files inside `/locales/en/` and `/locales-pending/`. After strings get added to files in the former directory on our `main` branch, they will be made available to our volunteer localizers via Pontoon, Mozilla's localization platform. Be sure to reference the [localization documentation](https://mozilla-l10n.github.io/documentation/localization/dev_best_practices.html) for best practices. It's best to only move the strings to `/locales/en/` when they are more-or-less final and ready for localization. Your PR should be automatically tagged with a reviewer from the [Mozilla L10n team](https://wiki.mozilla.org/L10n:Mozilla_Team) to approve your request.
 
-To trigger translations, open a pull request against `localization`. Please be mindful that Mozilla localizers are volunteers, and translations come from different locales at different times – usually after a week or more. It's best to initiate a PR when your strings are more-or-less final. Your PR should be automatically tagged with a reviewer from the [Mozilla L10n team](https://wiki.mozilla.org/L10n:Mozilla_Team) to approve your request.
+You can check translation status via the [Pontoon site](https://pontoon.mozilla.org/projects/firefox-monitor-website/). After strings have been localized, [a pull request](https://github.com/mozilla/blurts-server/pulls?q=is%3Apr+label%3Al10n+) with the updated strings is automatically opened against our repository. Please be mindful that Mozilla localizers are volunteers, and translations come from different locales at different times – usually after a week or more.
 
-After your updates are merged into `localization`, you will start to see commits from Pontoon, Mozilla's localization platform. You can also check translation status via the [Pontoon site](https://pontoon.mozilla.org/projects/firefox-monitor-website/). 
+To use the strings in code, you need to obtain a `ReactLocalization` instance, which selects the right version of your desired string for the user. How to do that depends on where your code runs: in tests, in a cron job, in a server component, or on the client-side. Generally, you will import a `getL10n` function from one of the modules in `/src/app/functions/l10n/`, except for [Client Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components), which use [the `useL10n` hook](./src/app/hooks/l10n.ts). Look at existing code for inspiration.
 
-When enough translations have been commited, you should merge `localization` into `main`, or back into your feature branch if it's not yet merged to `main`. Note it's unlikely to have 100% of locales translated. You might discuss with stakeholders which locales are priority.
+## Preview Deployment
 
-**Important:** Do not use "Squash" or "Rebase" to merge `localization` into `main` or vice versa.  Doing so creates new commit hashes and the branches will appear out of sync.
+We use GCP Cloudrun for dev review – official stage and production apps are built by the Dockerfile and Github Actions. Everything that is merged into `main` will deploy automatically to stage. The ADR for preview deployment can be found [here](https://github.com/mozilla/blurts-server/blob/main/docs/adr/0008-preview-deployment.md)
 
-TODO: auto-sync `localization` with `main`
+_**TODO:** add full deploy process similar to Relay_
 
-## Deployment
-
-Firefox Monitor Breach Alerts is designed with [12-factor](https://12factor.net/) methodology.
-
-### Deploy on Heroku
-
-We use Heroku apps for dev review only – official stage and production apps are built by the Dockerfile and CircleCI config, with deploy overseen by the Site Reliability Engineering team.
-
-Deploys from the `main` branch to Heroku are automatic.  We also employ Heroku's "Review Apps" to check Pull Requests.  These are currently set to auto-deploy: you can find the app link in your GitHub Pull Request. Review apps auto-destroy after 2 days of inactivity.
-
-If you encounter issues with Heroku deploys, be sure to check your environment variables, including those required in `app-constants.js`.  Review apps also share a database and you should not assume good data integrity if testing db-related features.
-
-## VPN Banner
-
-A banner has been added to inform users whether their IP address is being masked by Mozilla VPN.  It also uses their IP address to demonstrate geolocation. This can inform users why they might use Mozilla VPN for privacy.  
-
-The IP location data includes GeoLite2 data created by MaxMind, available from https://www.maxmind.com.  For localhost, a test MaxMind database with limited data is included with this repo. For the Heroku Dev site, the following buildpack is used to enable geolocation: https://github.com/HiMamaInc/heroku-buildpack-geoip-geolite2. For stage and prod environments, a shared database is set via env vars.
+_**TODO:** consider whether we can re-enable Heroku Review Apps_

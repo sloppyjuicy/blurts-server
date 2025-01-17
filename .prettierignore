@@ -1,0 +1,15 @@
+# TODO NEXT.JS MIGRATION:
+# These are still used, but ignored for Prettier to avoid a big-bang reformatting.
+# We can do such a reformatting later, or format them if/when we convert them to TypeScript:
+src/utils/**/*.js
+src/db/**/*.js
+src/emails/**/*.js
+
+# TODO NEXT.JS MIGRATION:
+
+# These should be ignored anyway
+coverage/
+playwright-report/
+
+# Ignore Glean generated files
+src/telemetry/generated/

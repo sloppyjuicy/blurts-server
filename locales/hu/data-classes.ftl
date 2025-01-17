@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Számlaegyenlegek
 address-book-contacts = Címjegyzék-kapcsolatok
@@ -10,11 +15,11 @@ apps-installed-on-devices = Eszközökre telepített alkalmazások
 astrological-signs = Asztrológiai jelek
 audio-recordings = Hangfelvételek
 auth-tokens = Hitelesítési tokenek
-avatars = Avatárok
+avatars = Profilképek
 bank-account-numbers = Bankszámlaszámok
 beauty-ratings = Szépség értékelések
 biometric-data = Biometrikus adatok
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Bemutatkozások
 browser-user-agent-details = Böngésző felhasználói ügynök részletei
@@ -25,6 +30,8 @@ career-levels = Karrier szintek
 cellular-network-names = Mobilhálózatok nevei
 charitable-donations = Jótékonysági adományok
 chat-logs = Csevegőnaplók
+citizenship-statuses = Állampolgársági állapotok
+clothing-sizes = Ruhaméretek
 credit-card-cvv = Bankkártyák CVV adatai
 credit-cards = Bankkártyák
 credit-status-information = Hitelképességi információk
@@ -34,6 +41,9 @@ customer-interactions = Vásárlói interakciók
 dates-of-birth = Születési idők
 deceased-date = Halálozási idők
 deceased-statuses = Halálozási állapotok
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Kiszállítási utasítások
 device-information = Eszközinformációk
 device-serial-numbers = Eszköz sorozatszámok
 device-usage-tracking-data = Eszközhasználati követési adatok
@@ -42,7 +52,7 @@ driver-s-licenses = Jogosítványok
 drug-habits = Kábítószer-fogyasztási szokások
 eating-habits = Étkezési szokások
 education-levels = Oktatási szintek
-email-addresses = E-mail címek
+email-addresses = E-mail-címek
 email-messages = E-mail üzenetek
 employers = Munkáltatók
 employment-statuses = Foglalkoztatási állapotok
@@ -54,14 +64,16 @@ family-structure = Családszerkezet
 financial-investments = Pénzügyi befektetések
 financial-transactions = Pénzügyi tranzakciók
 fitness-levels = Fizikai állapot
+flights-taken = Repülések
 genders = Nemek
 geographic-locations = Földrajzi helyek
 government-issued-ids = Kormány által kiállított igazolványok
 health-insurance-information = Egészségbiztosítási információk
 historical-passwords = Régebben használt jelszavak
+hiv-statuses = HIV állapotok
 home-loan-information = Lakáshitel információk
 home-ownership-statuses = Lakástulajdonosi állapotok
-homepage-urls = Weboldal URL-ek
+homepage-urls = Kezdőlapok webcímei
 imei-numbers = IMEI számok
 imsi-numbers = IMSI számok
 income-levels = Bevételi szintek
@@ -69,10 +81,13 @@ instant-messenger-identities = Azonnali üzenetküldő identitások
 ip-addresses = IP-címek
 job-applications = Állásjelentkezések
 job-titles = Beosztások
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Rendszámtáblák
 living-costs = Megélhetési költségek
+# This string refers to financial loans.
+loan-information = Hitelinformációk
 login-histories = Bejelentkezési előzmények
+loyalty-program-details = Hűségprogram részletei
 mac-addresses = MAC-címek
 marital-statuses = Családi állapotok
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Nevek
 nationalities = Nemzetiségek
 net-worths = Nettó bevételek
 nicknames = Becenevek
+# no data classes found
+none-data-class = Nincs
 occupations = Foglalkozások
+# various data classes grouped together
+other-data-class = Egyéb
 parenting-plans = Családtervezési tervek
 partial-credit-card-data = Részleges hitelkártyaadatok
 partial-dates-of-birth = Részleges születési dátumok
+partial-phone-numbers = Részleges telefonszámok
 passport-numbers = Útlevélszámok
 password-hints = Jelszóemlékeztetők
 password-strengths = Jelszóerősségek
@@ -109,7 +129,7 @@ profile-photos = Profilképek
 purchases = Vásárlások
 purchasing-habits = Vásárlási szokások
 races = Faji hovatartozások
-recovery-email-addresses = Helyreállítási e-mail címek
+recovery-email-addresses = Helyreállítási e-mail-címek
 relationship-statuses = Kapcsolati állapotok
 religions = Vallások
 reward-program-balances = Jutalomprogram egyenlegek
@@ -128,13 +148,15 @@ spouses-names = Házastársak nevei
 support-tickets = Támogatási jegyek
 survey-results = Felmérési eredmények
 taxation-records = Adózási nyilvántartások
+telecommunications-carrier = Távközlési szolgáltatók
 time-zones = Időzónák
 travel-habits = Utazási szokások
 user-statuses = Felhasználói állapotok
-user-website-urls = Felhasználó weboldalainak URL-címei
+user-website-urls = Felhasználó weboldalainak webcímei
 usernames = Felhasználónevek
 utility-bills = Rezsiszámlák
 vehicle-details = Gépjármű részletek
+vehicle-identification-numbers-vins = Rendszámok
 website-activity = Weboldalon végzett tevékenységek
 work-habits = Munkaszokások
 years-of-birth = Születési évek

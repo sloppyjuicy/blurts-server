@@ -1,4 +1,9 @@
-## Breach Data Classes
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Breach Data Classes
 
 account-balances = Kontosaldon
 address-book-contacts = Adressbokskontakter
@@ -14,7 +19,7 @@ avatars = Avatarer
 bank-account-numbers = Bankkontonummer
 beauty-ratings = Skönhetsbetyg
 biometric-data = Biometriska data
-# This string is the shortened version of "Biographies", and 
+# This string is the shortened version of "Biographies", and
 # refers to biographical data about a user.
 bios = Personuppgifter
 browser-user-agent-details = Information om webbläsarens användaragent
@@ -25,6 +30,8 @@ career-levels = Karriärnivåer
 cellular-network-names = Mobilnätsnamn
 charitable-donations = Välgörande donationer
 chat-logs = Chattloggar
+citizenship-statuses = Medborgarskapsstatusar
+clothing-sizes = Klädstorlekar
 credit-card-cvv = Kreditkort CVV
 credit-cards = Kreditkort
 credit-status-information = Kreditstatusinformation
@@ -34,6 +41,9 @@ customer-interactions = Kundinteraktioner
 dates-of-birth = Födelsedatum
 deceased-date = Dödsdatum
 deceased-statuses = Dödsannonser
+# Instructions that you can set up in online shopping services to get your orders
+# delivered (e.g. deliver to a specific neighbor, entrance location, etc.).
+delivery-instructions = Leveransinstruktioner
 device-information = Enhetsinformation
 device-serial-numbers = Serienummer på enheter
 device-usage-tracking-data = Spårningsdata för enhetsanvändning
@@ -54,11 +64,13 @@ family-structure = Familjestruktur
 financial-investments = Finansiella investeringar
 financial-transactions = Finansiella transaktioner
 fitness-levels = Fitnessnivåer
+flights-taken = Använda flyg
 genders = Kön
 geographic-locations = Geografiska platser
 government-issued-ids = Regeringens utfärdade ID
 health-insurance-information = Sjukförsäkringsinformation
 historical-passwords = Historiska lösenord
+hiv-statuses = HIV-status
 home-loan-information = Hemlånsinformation
 home-ownership-statuses = Bostadsstatus
 homepage-urls = Hemsidaadresser
@@ -69,10 +81,13 @@ instant-messenger-identities = Instant messenger identiteter
 ip-addresses = IP-adresser
 job-applications = Jobbansökningar
 job-titles = Jobbtitlar
-# This string refers to vehicle license plates. 
+# This string refers to vehicle license plates.
 licence-plates = Registreringsskyltar
 living-costs = Levnadskostnader
+# This string refers to financial loans.
+loan-information = Låneinformation
 login-histories = Inloggningshistorik
+loyalty-program-details = Detaljer för lojalitetsprogram
 mac-addresses = MAC-adresser
 marital-statuses = Civilstånd
 # Mnemonic phrases are a group of words used to access the content of cryptocurrency wallets.
@@ -82,10 +97,15 @@ names = Namn
 nationalities = Nationaliteter
 net-worths = Nettovärden
 nicknames = Smeknamn
+# no data classes found
+none-data-class = Ingen
 occupations = Yrken
+# various data classes grouped together
+other-data-class = Annat
 parenting-plans = Föräldraplaner
 partial-credit-card-data = Delvis kreditkortsdata
 partial-dates-of-birth = Delar av födelsedatum
+partial-phone-numbers = Partiella telefonnummer
 passport-numbers = Passnummer
 password-hints = Lösenordstips
 password-strengths = Lösenordsstyrka
@@ -128,6 +148,7 @@ spouses-names = Makarnas namn
 support-tickets = Support-biljetter
 survey-results = Undersökningsresultat
 taxation-records = Skatteregister
+telecommunications-carrier = Teleoperatörer
 time-zones = Tidszoner
 travel-habits = Resevanor
 user-statuses = Användarstatusar
@@ -135,6 +156,7 @@ user-website-urls = Adresser till användarwebbplatser
 usernames = Användarnamn
 utility-bills = Elräkningar
 vehicle-details = Fordonsdetaljer
+vehicle-identification-numbers-vins = Fordonsidentifikationsnummer (VIN)
 website-activity = Webbplatsaktivitet
 work-habits = Arbetsvanor
 years-of-birth = Födelseår

@@ -1,0 +1,16 @@
+@use "../../tokens";
+
+.underlay {
+  position: fixed;
+  inset: 0;
+}
+
+.popover {
+  background: tokens.$color-white;
+  box-shadow: none;
+  border-radius: tokens.$border-radius-sm;
+
+  &.isOpen {
+    box-shadow: tokens.$box-shadow-sm;
+  }
+}

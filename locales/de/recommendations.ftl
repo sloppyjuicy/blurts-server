@@ -1,3 +1,7 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 # Recommendation subhead
 rec-ssn-subhead = Überprüfen Sie Ihre Kreditkartenabrechnungen
 # Link title
@@ -10,10 +14,10 @@ rec-ssn =
 rec-pw-1-subhead = Ändern Sie Ihr Passwort
 # Link title
 rec-pw-1-cta = Passwort für diese Website ändern
-rec-pw-1 =
+rec-pw-1-2 =
     Dies Passwort sollten Sie nur einmal verwenden und es sollte sich von Ihren anderen Passwörtern unterscheiden.
     Eine gute Strategie besteht darin, zwei oder mehr unabhängige Wörter zu kombinieren, 
-    um eine komplette Passphrase zu erstellen.
+    um eine komplette Passphrase zu erstellen, sowie Ziffern und Symbole aufzunehmen.
 # Recommendation subhead
 rec-pw-2-subhead = Ändern Sie Zugangsdaten, bei denen Sie dasselbe Passwort verwenden
 # Link title
@@ -22,7 +26,7 @@ rec-pw-2 =
     Wenn Sie Passwörter wiederverwenden, betrifft ein Datenleck gleich mehrere Konten.
     Jetzt, da dieses Passwort bekannt ist, können Hacker damit auch in andere Konten eindringen.
 # Recommendation subhead
-rec-pw-3-subhead = Verwenden Sie einen Passwort-Manager, um Ihre Passwörter überallhin mitzunehmen
+rec-pw-3-subhead = Verwenden Sie eine Passwortverwaltung, um Ihre Passwörter überallhin mitzunehmen
 # Link title
 rec-pw-3-cta = Holen Sie sich { -brand-lockwise }
 rec-pw-3-fx =
@@ -50,27 +54,20 @@ rec-cc =
     Achten Sie auf ungewöhnliche Belastungen Ihrer Kreditkarte. Gegebenenfalls
     sollten Sie von Ihrem Kreditkartenanbieter eine neue Karte mit neuer Nummer anfordern.
 # Recommendation subhead
-rec-email-subhead = E-Mail-Aliase verwenden
+rec-email-mask-subhead = Verwenden Sie eine E-Mail-Maske
 rec-email-cta = Probieren Sie { -brand-relay } aus
 rec-email =
     Wenn Sie Ihre echte E-Mail-Adresse angeben, können Hacker oder Tracker leichter
     Ihre Passwörter ermitteln oder Sie im Internet verfolgen. Ein Dienst wie { -brand-relay }
     versteckt Ihre echte E-Mail-Adresse und leitet gleichzeitig E-Mails an Ihren echten Posteingang weiter.
 # Recommendation subhead
-rec-ip-subhead = Verwenden Sie einen Dienst, der Ihre IP-Adresse maskiert
-# Link title
-rec-ip-us-cta = Probieren Sie { -brand-fpn } aus
-rec-ip-us =
-    Ihre Internet-Protocol-Adresse (IP-Adresse) zeigt Ihren Standort
-    und Internet-Dienstanbieter. Ein Dienst wie { -brand-fpn }
-    verschleiert Ihre IP-Adresse, um Ihren Standort zu verbergen.
-rec-ip-non-us =
-    Ihre Internet-Protocol-Adresse (IP-Adresse) zeigt Ihren Standort
-    und Internet-Dienstanbieter. Mit einem Virtuellen Privaten Netzwerk (VPN) können Sie
-    Ihren Standort verbergen und Ihre IP-Adresse verschleiern.
+rec-ip-subhead-2 = Verwenden Sie ein VPN, um Ihre IP-Adresse zu maskieren
 # Recommendation subhead
 rec-moz-vpn-cta = Probieren Sie { -brand-mozilla-vpn } aus
-rec-moz-vpn-update = Ihre Internet-Protokoll-Adresse (IP-Adresse) kann Ihren Standort und Internetdienstanbieter verraten. Ein Dienst wie { -brand-mozilla-vpn } verbirgt Ihre IP-Adresse und Ihren Standort für Ihr gesamtes Gerät.
+rec-moz-vpn-update-2 =
+    Ihre Internet-Protocol-Adresse (IP-Adresse) zeigt Ihren Standort
+    und Internet-Dienstanbieter. Ein Dienst wie { -brand-mozilla-vpn }
+    verschleiert Ihre IP-Adresse, um Ihren Standort zu verbergen.
 rec-hist-pw-subhead = Vermeiden Sie die Wiederverwendung von Passwörtern
 # Link title
 rec-hist-pw-cta-fx = Zugangsdaten in { -brand-name } ansehen
@@ -114,9 +111,9 @@ rec-gen-1 =
 # Recommendation subhead
 rec-gen-2-subhead = Bewahren Sie Passwörter an einem sicheren Ort auf
 # Link title
-rec-gen-2-cta = Mythen über Passwort-Manager
+rec-gen-2-cta = Mythen über Passwortverwaltungen
 rec-gen-2 =
-    Bewahren Sie Ihre Zugangsdaten an einem sicheren Ort auf, auf den nur Sie zugreifen können, zum Beispiel einen Passwort-Manager.
+    Bewahren Sie Ihre Zugangsdaten an einem sicheren Ort auf, auf den nur Sie zugreifen können, zum Beispiel eine Passwortverwaltung.
     Dies macht es auch einfach, alle Ihre unterschiedlichen Passwörter im Auge zu behalten.
 # Recommendation subhead
 rec-gen-3-subhead = Seien Sie vorsichtig, wenn Sie persönliche Daten weitergeben

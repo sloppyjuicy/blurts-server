@@ -1,86 +1,82 @@
-# Firefox Monitor is a product name and should not be translated.
--product-name = Firefox Monitor
-# Firefox is a brand name and should not be translated.
--brand-name = Firefox
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Email headers
+
+email-header-logo-alt = { -brand-mozilla-monitor }
+email-header-button-sign-in = 登录
+
+## Email footers
+
+email-footer-support-heading = 对 { -brand-mozilla-monitor } 有疑问？
+email-footer-support-content = 访问我们的<support-link>支持中心</support-link>可获取帮助
+email-footer-trigger-transactional = 您是 { -brand-mozilla-monitor } 的订阅用户，因此收到此邮件。
+email-footer-source-hibp = 外泄事件数据由 <hibp-link>{ -brand-HIBP }</hibp-link> 提供
+email-footer-logo-mozilla-alt = { -brand-mozilla }
+email-footer-meta-privacy-notice = 隐私
 # Firefox Relay is a product name and should not be translated.
 -product-name-relay = Firefox Relay
 # Mozilla VPN is a product name and should not be translated.
 -product-name-vpn = Mozilla VPN
-# A Firefox Monitor Report is an emailed statement from Firefox Monitor containing a list of known data breaches where the user’s email address was found amongst the stolen data.
-firefox-monitor-report = { -product-name } 报告
-report-date = 报告日期：
-email-address = 电子邮件地址：
 # A link to legal information about mozilla products.
 legal = 法律信息
-# Unsubscribe link in email.
-email-unsub-link = 退订
-# This string appears in the footer of breach report and breach alert emails.
-# { $unsubLink } is a link to the user's dashboard where they can unsubscribe from Monitor
-# and uses the text from { email-unsub-link }. { $faqLink } is a link to the 
-# Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-footer-blurb = 您收到此电子邮件，是因为您曾经注册过 { -product-name } 警报。不想再收到这些电子邮件？ { $unsubLink }。这是一封自动发送的邮件。如需帮助，请访问 { $faqLink }。
-# This string appears in the footer of verification emails. { $faqLink } is a link
-# to the Firefox Monitor SUMO page and uses the text from { frequently-asked-questions }.
-email-verify-footer-copy = 您收到此电子邮件，是因为您曾经注册过 { -product-name } 警报。这是一封自动发送的邮件。如需帮助，请访问 { $faqLink }。
 # Button text
 verify-email-cta = 验证邮箱
-# Button text
-see-all-breaches = 查看所有数据外泄事件
 # Headline of verification email
 email-link-expires = 此链接将在 24 小时后失效
-email-verify-blurb = 请验证您的电子邮件地址，即可将其添加到 { -product-name } 并订阅数据外泄警报。
-# Email headline
-email-found-breaches-hl = 以下是您过去数据外泄情况的概要
-# Email headline
-email-breach-summary-for-email = { $userEmail } 的数据外泄事件概要
-# Email headline
-email-no-breaches-hl = { $userEmail } 出现在 0 次已知的数据外泄事件中
-# Email headline
-email-alert-hl = { $userEmail } 出现在新的数据外泄事件中
+
+##
+
 # Subject line of email
 email-subject-found-breaches = { -product-name } 在下列数据外泄事件找到您的信息
 # Subject line of email
 email-subject-no-breaches = { -product-name } 未找到相关数据外泄事件
 # Subject line of email
-email-subject-verify = { -product-name }：验证您的电子邮件地址
-# { $fxmLink } is a link to Firefox Monitor and uses the text from { -product-name }.
-learn-more-about-fxm = 详细了解有关“{ $fxmLink }”
-email-sensitive-disclaimer = 由于该数据外泄事件的敏感性，相关的电子邮件数据并未公开披露。您会收到此警报是因为您是此电子邮件地址经过验证的所有者。
-fxm-warns-you-no-breaches = { -product-name } 会在有与您相关的个人信息外泄事件发生时警告您。目前为止，未发生过外泄事件。我们会在您的电子邮件地址出现在新事件中时通知您。
-fxm-warns-you-found-breaches = { -product-name } 会在有与您相关的个人信息外泄事件发生时警告您。当您的电子邮件地址出现在新事件中时，您会收到订阅的警报。
+email-subject-verify = { -product-name }：验证您的邮箱地址
+fxm-warns-you-no-breaches = { -product-name } 会在有与您相关的个人信息外泄事件发生时警告您。目前为止，未发生过外泄事件。我们会在您的邮箱地址出现在新事件中时通知您。
 email-breach-alert-blurb = { -product-name } 会在有与您相关的个人信息外泄事件发生时警告您。我们刚收到其他公司的数据外泄事件。
-# List headline
-faq-list-headline = 常见问题
-# Link Title
-faq-v2-1 = 我不认识其中的一家公司或网站，为什么我与该外泄事件有关？
-# Link Title
-faq-v2-2 = 如果外泄事件发生在几年前，或是已经不用的账号，我还需要做什么吗？
-# Link Title
-faq-v2-3 = 我刚刚发现自己遭受了数据外泄。接下来我该怎么做？
-# Link Title
-faq-v2-4 = { -product-name } 如何处理这些敏感网站？
-# This string contains nested markup that becomes a link to Firefox Monitor
-# later in the code. Please do not modify or remove "<a>" and "</a>".
-pre-fxa-message = <a>创建免费的 { -brand-fxa }</a>，您最多可添加 15 个电子邮件地址。
-# Section headline
-monitor-another-email = 要监控其他电子邮件地址吗？
-# Subject line of email
-pre-fxa-subject = { -product-name } 的更新
-pre-fxa-headline = { -product-name } 的变化
-pre-fxa-blurb = { -product-name } —— 保障个人信息的数据泄露监控服务，在您注册之后已经有一些改变。我们已将它与 Firefox 账号相连。
-pre-fxa-tout-1 = 警惕新发生的数据泄露
-pre-fxa-p-1 = <a>创建一个账号</a>，监控最多 15 个电子邮件地址是否涉及到数据泄露。我们推荐您添加常用于网上账号的所有电子邮件地址。
-pre-fxa-tout-2 = 获得概况面板
-pre-fxa-p-2 =
-    同一个地方检查已知的所有数据泄露，了解您需要更换哪些密码。
-    该面板仅供注册用户使用。
-pre-fxa-tout-3 = 接收电子邮件通知
-pre-fxa-p-3 = 您仍然会收到 { -product-name } 的警讯。如果您的信息出现在新发生的数据泄漏中，我们会通知您。
-# Button at the bottom of pre-fxa email.
-create-account = 创建账号
-# More security products
-more-products-headline = 用我们的系列产品保护自己
-more-products-vpn = 全方位保护您的每台设备
-more-products-cta-vpn = 下载 { -product-name-vpn }
-more-products-relay = 隐藏您的的真实邮箱地址，保护身份信息。
-more-products-cta-relay = 下载 { -product-name-relay }
+
+## 2022 email template. HTML tags should not be translated, e.g. `<a>`
+
+# Have I Been Pwned attribution
+# Variables:
+#   $hibp-link-attr (String) - Link to Have I Been Pwned
+email-2022-hibp-attribution = 数据外泄事件信息由 <a { $hibp-link-attr }>{ -brand-HIBP }</a> 提供
+
+## Verification email
+
+email-verify-heading = 立即行动，保护您的个人数据
+email-verify-subhead = 验证您的邮箱地址以在泄露事件发生后保护您的数据。
+email-verify-simply-click = 请尽快点击下方链接，完成账户验证。
+
+## Breach report
+
+email-breach-summary = 以下是您的数据外泄情况概览
+# Variables:
+#   $email-address (string) - Email address, bolded
+email-breach-detected = 您的 { $email-address } 账户的搜索结果显示您的邮箱地址可能已被泄露。我们建议您立即采取行动来应对此次泄露。
+# Deprecated after the redesigned breach alert email is launched
+# Variables:
+#   $email-address (string) - Email address
+email-breach-detected-2 = 您的 <b>{ $email-address }</b> 账户的搜索结果显示，您的邮箱地址可能已被泄露。建议立即采取行动来应对此次外泄事件。
+email-dashboard-cta = 前往面板
+
+## Breach alert
+
+# Deprecated after the redesigned breach alert email is launched
+email-spotted-new-breach = 我们发现新的数据外泄事件
+
+## Redesigned breach alert email
+
+email-breach-alert-all-subject = 检测到新的数据外泄事件
+email-breach-alert-all-preview = 我们将指导您采取措施，逐项解决此问题。
+email-breach-alert-all-hero-heading = 您正受新发生的数据外泄事件影响
+email-breach-alert-all-hero-subheading = 不必担心，我们可以帮助您解决此次暴露问题
+email-breach-alert-all-lead = { -brand-mozilla-monitor } 发现以下数据外泄事件，当中涉及到您的个人信息：
+email-breach-alert-all-source-title = 外泄事件来源：
+email-breach-alert-all-data-points-title = 暴露日期：
+email-breach-alert-all-next-steps-lead = 我们会一步步指导您处理此次数据外泄事件。
+email-breach-alert-all-next-steps-cta-label = 开始处理
+email-breach-alert-all-next-steps-button-dashboard = 前往面板
